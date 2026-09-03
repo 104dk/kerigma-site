@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kerigma Admin â€” E-commerce</title>
+  <title>Kerigma Admin — E-commerce</title>
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#001a47">
   <link rel="manifest" href="manifest-admin.webmanifest">
@@ -23,7 +23,7 @@
 <body>
   <div class="app-shell">
 
-    <!-- â•â•â•â•â•â•â•â•â•â•â• SIDEBAR â•â•â•â•â•â•â•â•â•â•â• -->
+    <!-- ═══════════ SIDEBAR ═══════════ -->
     <aside class="sidebar" id="sidebar">
       <div class="sidebar-brand">
         <div class="brand-icon"><i class="fas fa-church"></i></div>
@@ -51,7 +51,7 @@
           <button class="sidebar-item sub-trigger" data-sub="vendas"><i class="fas fa-shopping-cart"></i><span>Vendas</span><i class="fas fa-chevron-down chev"></i></button>
           <div class="sidebar-sub" id="sub-vendas">
             <a class="sidebar-subitem" data-route="pedidos"><span>Pedidos</span></a>
-            <a class="sidebar-subitem" data-route="expedicao"><span>ExpediÃ§Ã£o</span></a>
+            <a class="sidebar-subitem" data-route="expedicao"><span>Expedição</span></a>
             <a class="sidebar-subitem" data-route="fretes"><span>Fretes</span></a>
           </div>
         </div>
@@ -65,19 +65,19 @@
         </div>
 
         <div class="sidebar-section">
-          <button class="sidebar-item sub-trigger" data-sub="analises"><i class="fas fa-chart-line"></i><span>AnÃ¡lises</span><i class="fas fa-chevron-down chev"></i></button>
+          <button class="sidebar-item sub-trigger" data-sub="analises"><i class="fas fa-chart-line"></i><span>Análises</span><i class="fas fa-chevron-down chev"></i></button>
           <div class="sidebar-sub" id="sub-analises">
-            <a class="sidebar-subitem" data-route="relatorios"><span>RelatÃ³rios</span></a>
-            <a class="sidebar-subitem" data-route="avaliacoes"><span>AvaliaÃ§Ãµes</span></a>
+            <a class="sidebar-subitem" data-route="relatorios"><span>Relatórios</span></a>
+            <a class="sidebar-subitem" data-route="avaliacoes"><span>Avaliações</span></a>
           </div>
         </div>
 
         <div class="sidebar-section">
-          <button class="sidebar-item sub-trigger" data-sub="config"><i class="fas fa-cog"></i><span>ConfiguraÃ§Ã£o</span><i class="fas fa-chevron-down chev"></i></button>
+          <button class="sidebar-item sub-trigger" data-sub="config"><i class="fas fa-cog"></i><span>Configuração</span><i class="fas fa-chevron-down chev"></i></button>
           <div class="sidebar-sub" id="sub-config">
-            <a class="sidebar-subitem" data-route="aparencia"><span>AparÃªncia</span></a>
+            <a class="sidebar-subitem" data-route="aparencia"><span>Aparência</span></a>
             <a class="sidebar-subitem" data-route="equipe"><span>Equipe</span></a>
-            <a class="sidebar-subitem" data-route="configuracoes"><span>ConfiguraÃ§Ãµes</span></a>
+            <a class="sidebar-subitem" data-route="configuracoes"><span>Configurações</span></a>
           </div>
         </div>
       </nav>
@@ -94,13 +94,13 @@
 
     <div class="mobile-backdrop" id="mobileBackdrop"></div>
 
-    <!-- â•â•â•â•â•â•â•â•â•â•â• MAIN â•â•â•â•â•â•â•â•â•â•â• -->
+    <!-- ═══════════ MAIN ═══════════ -->
     <div class="app-main">
       <header class="topbar">
         <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu"><i class="fas fa-bars"></i></button>
         <div class="topbar-title">
           <h1 id="pageTitle">Dashboard</h1>
-          <span id="pageCrumb">VisÃ£o geral</span>
+          <span id="pageCrumb">Visão geral</span>
         </div>
         <div class="topbar-actions">
           <button class="tb-btn" id="themeToggle" title="Alternar tema"><i class="fas fa-sun" id="themeIcon"></i></button>
@@ -113,37 +113,37 @@
 
       <main class="content" id="content">
 
-        <!-- â•â•â•â• ROTA: DASHBOARD â•â•â•â• -->
+        <!-- ════ ROTA: DASHBOARD ════ -->
         <section class="panel" data-panel="dashboard">
           <div class="panel-toolbar">
             <div>
               <h2>Dashboard</h2>
-              <p class="panel-sub">VisÃ£o geral da sua loja digital.</p>
+              <p class="panel-sub">Visão geral da sua loja digital.</p>
             </div>
             <div class="toolbar-right">
               <select id="dashPeriod" class="input-sm">
                 <option value="today">Hoje</option>
                 <option value="week" selected>Semana</option>
-                <option value="month">MÃªs</option>
+                <option value="month">Mês</option>
                 <option value="year">Ano</option>
               </select>
             </div>
           </div>
           <div class="kpi-grid" id="dashKpis">
-            <div class="kpi-card"><div class="kpi-value" id="kpiOrders">â€“</div><div class="kpi-label">Pedidos</div></div>
-            <div class="kpi-card"><div class="kpi-value" id="kpiRevenue">â€“</div><div class="kpi-label">Receita</div></div>
-            <div class="kpi-card"><div class="kpi-value" id="kpiPending">â€“</div><div class="kpi-label">Pedidos pendentes</div></div>
-            <div class="kpi-card"><div class="kpi-value" id="kpiItems">â€“</div><div class="kpi-label">Itens vendidos</div></div>
+            <div class="kpi-card"><div class="kpi-value" id="kpiOrders">–</div><div class="kpi-label">Pedidos</div></div>
+            <div class="kpi-card"><div class="kpi-value" id="kpiRevenue">–</div><div class="kpi-label">Receita</div></div>
+            <div class="kpi-card"><div class="kpi-value" id="kpiPending">–</div><div class="kpi-label">Pedidos pendentes</div></div>
+            <div class="kpi-card"><div class="kpi-value" id="kpiItems">–</div><div class="kpi-label">Itens vendidos</div></div>
           </div>
           <div class="kpi-grid">
-            <div class="kpi-card"><div class="kpi-value gold" id="kpiTop">â€“</div><div class="kpi-label">Mais vendido</div></div>
-            <div class="kpi-card"><div class="kpi-value" id="kpiBottom">â€“</div><div class="kpi-label">Menos vendido</div></div>
-            <div class="kpi-card"><div class="kpi-value" id="kpiTicket">â€“</div><div class="kpi-label">Ticket mÃ©dio</div></div>
-            <div class="kpi-card"><div class="kpi-value" id="kpiActive">â€“</div><div class="kpi-label">Produtos ativos</div></div>
+            <div class="kpi-card"><div class="kpi-value gold" id="kpiTop">–</div><div class="kpi-label">Mais vendido</div></div>
+            <div class="kpi-card"><div class="kpi-value" id="kpiBottom">–</div><div class="kpi-label">Menos vendido</div></div>
+            <div class="kpi-card"><div class="kpi-value" id="kpiTicket">–</div><div class="kpi-label">Ticket médio</div></div>
+            <div class="kpi-card"><div class="kpi-value" id="kpiActive">–</div><div class="kpi-label">Produtos ativos</div></div>
           </div>
           <div class="dash-grid">
             <div class="panel">
-              <h3>Receita Ãºltimos 7 dias</h3>
+              <h3>Receita últimos 7 dias</h3>
               <div class="bar-chart" id="dashChart"></div>
             </div>
             <div class="panel">
@@ -153,7 +153,7 @@
           </div>
         </section>
 
-        <!-- â•â•â•â• ROTA: PRODUTOS â•â•â•â• -->
+        <!-- ════ ROTA: PRODUTOS ════ -->
         <section class="panel" data-panel="produtos">
           <div class="panel-toolbar">
             <div>
@@ -174,10 +174,10 @@
               <option value="">Todos os tipos</option>
               <option value="ebook">E-book</option>
               <option value="curso">Curso</option>
-              <option value="video">VÃ­deo</option>
+              <option value="video">Vídeo</option>
               <option value="material">Material</option>
             </select>
-            <label class="check-pill"><input type="checkbox" id="prodNoStock"> <span>ðŸ“¦ Sem estoque</span></label>
+            <label class="check-pill"><input type="checkbox" id="prodNoStock"> <span>📦 Sem estoque</span></label>
           </div>
           <div class="table-wrap">
             <table class="data-table" id="prodTable">
@@ -185,7 +185,7 @@
                 <tr>
                   <th class="col-check"><input type="checkbox" id="prodCheckAll"></th>
                   <th>Imagem</th><th>Nome</th><th>Categoria</th><th>Tipo</th>
-                  <th>PreÃ§o</th><th>Estoque</th><th>DisponÃ­vel</th><th>Destaque</th><th>AÃ§Ãµes</th>
+                  <th>Preço</th><th>Estoque</th><th>Disponível</th><th>Destaque</th><th>Ações</th>
                 </tr>
               </thead>
               <tbody id="prodTbody"></tbody>
@@ -194,7 +194,7 @@
           <div class="empty-state" id="prodEmpty" style="display:none">Nenhum produto encontrado.</div>
         </section>
 
-        <!-- â•â•â•â• ROTA: CATEGORIAS â•â•â•â• -->
+        <!-- ════ ROTA: CATEGORIAS ════ -->
         <section class="panel" data-panel="categorias">
           <div class="panel-toolbar">
             <div><h2>Categorias</h2><p class="panel-sub">Organize seus produtos por categoria.</p></div>
@@ -204,7 +204,7 @@
           <div class="empty-state" id="catEmpty" style="display:none">Nenhuma categoria.</div>
         </section>
 
-        <!-- â•â•â•â• ROTA: PEDIDOS â•â•â•â• -->
+        <!-- ════ ROTA: PEDIDOS ════ -->
         <section class="panel" data-panel="pedidos">
           <div class="panel-toolbar">
             <div><h2>Pedidos</h2><p class="panel-sub">Acompanhe suas vendas.</p></div>
@@ -222,17 +222,17 @@
           </div>
           <div class="table-wrap">
             <table class="data-table" id="orderTable">
-              <thead><tr><th>CÃ³digo</th><th>Cliente</th><th>Vendedora</th><th>Total</th><th>Pagamento</th><th>Status</th><th>Data</th><th>AÃ§Ãµes</th></tr></thead>
+              <thead><tr><th>Código</th><th>Cliente</th><th>Vendedora</th><th>Total</th><th>Pagamento</th><th>Status</th><th>Data</th><th>Ações</th></tr></thead>
               <tbody id="orderTbody"></tbody>
             </table>
           </div>
           <div class="empty-state" id="orderEmpty" style="display:none">Nenhum pedido.</div>
         </section>
 
-        <!-- â•â•â•â• ROTA: EXPEDIÃ‡ÃƒO â•â•â•â• -->
+        <!-- ════ ROTA: EXPEDIÇÃO ════ -->
         <section class="panel" data-panel="expedicao">
           <div class="panel-toolbar">
-            <div><h2>ExpediÃ§Ã£o</h2><p class="panel-sub">Gerencie o fluxo de envio dos pedidos.</p></div>
+            <div><h2>Expedição</h2><p class="panel-sub">Gerencie o fluxo de envio dos pedidos.</p></div>
             <div class="toolbar-right">
               <select id="expStatusFilter" class="input-sm">
                 <option value="">Todos</option>
@@ -245,28 +245,28 @@
           </div>
           <div class="table-wrap">
             <table class="data-table" id="expTable">
-              <thead><tr><th>CÃ³digo</th><th>Cliente</th><th>Status</th><th>Rastreio</th><th>AÃ§Ãµes</th></tr></thead>
+              <thead><tr><th>Código</th><th>Cliente</th><th>Status</th><th>Rastreio</th><th>Ações</th></tr></thead>
               <tbody id="expTbody"></tbody>
             </table>
           </div>
           <div class="empty-state" id="expEmpty" style="display:none">Nenhum pedido.</div>
         </section>
 
-        <!-- â•â•â•â• ROTA: FRETES â•â•â•â• -->
+        <!-- ════ ROTA: FRETES ════ -->
         <section class="panel" data-panel="fretes">
           <div class="panel-toolbar">
             <div><h2>Fretes</h2><p class="panel-sub">Transportadora, custo e rastreio por pedido.</p></div>
           </div>
           <div class="table-wrap">
             <table class="data-table" id="freteTable">
-              <thead><tr><th>CÃ³digo</th><th>Cliente</th><th>MÃ©todo</th><th>Custo</th><th>Rastreio</th><th>Status</th></tr></thead>
+              <thead><tr><th>Código</th><th>Cliente</th><th>Método</th><th>Custo</th><th>Rastreio</th><th>Status</th></tr></thead>
               <tbody id="freteTbody"></tbody>
             </table>
           </div>
           <div class="empty-state" id="freteEmpty" style="display:none">Nenhum pedido.</div>
         </section>
 
-        <!-- â•â•â•â• ROTA: CLIENTES â•â•â•â• -->
+        <!-- ════ ROTA: CLIENTES ════ -->
         <section class="panel" data-panel="clientes">
           <div class="panel-toolbar">
             <div><h2>Clientes</h2><p class="panel-sub">Base de clientes da sua loja.</p></div>
@@ -274,32 +274,32 @@
           </div>
           <div class="table-wrap">
             <table class="data-table" id="custTable">
-              <thead><tr><th>Nome</th><th>WhatsApp</th><th>Email</th><th>Cidade</th><th>Pedidos</th><th>Total</th><th>AÃ§Ãµes</th></tr></thead>
+              <thead><tr><th>Nome</th><th>WhatsApp</th><th>Email</th><th>Cidade</th><th>Pedidos</th><th>Total</th><th>Ações</th></tr></thead>
               <tbody id="custTbody"></tbody>
             </table>
           </div>
           <div class="empty-state" id="custEmpty" style="display:none">Nenhum cliente.</div>
         </section>
 
-        <!-- â•â•â•â• ROTA: VENDEDORAS â•â•â•â• -->
+        <!-- ════ ROTA: VENDEDORAS ════ -->
         <section class="panel" data-panel="vendedoras">
           <div class="panel-toolbar">
-            <div><h2>Vendedoras</h2><p class="panel-sub">Cadastro administrativo (sem login prÃ³prio).</p></div>
+            <div><h2>Vendedoras</h2><p class="panel-sub">Cadastro administrativo (sem login próprio).</p></div>
             <div class="toolbar-right"><button class="btn btn-primary btn-sm" id="sellerNew"><i class="fas fa-plus"></i> Nova Vendedora</button></div>
           </div>
           <div class="table-wrap">
             <table class="data-table" id="sellerTable">
-              <thead><tr><th>Nome</th><th>WhatsApp</th><th>ComissÃ£o</th><th>Ativa</th><th>Vendas</th><th>ComissÃ£o estimada</th><th>AÃ§Ãµes</th></tr></thead>
+              <thead><tr><th>Nome</th><th>WhatsApp</th><th>Comissão</th><th>Ativa</th><th>Vendas</th><th>Comissão estimada</th><th>Ações</th></tr></thead>
               <tbody id="sellerTbody"></tbody>
             </table>
           </div>
           <div class="empty-state" id="sellerEmpty" style="display:none">Nenhuma vendedora.</div>
         </section>
 
-        <!-- â•â•â•â• ROTA: RELATÃ“RIOS â•â•â•â• -->
+        <!-- ════ ROTA: RELATÓRIOS ════ -->
         <section class="panel" data-panel="relatorios">
           <div class="panel-toolbar">
-            <div><h2>RelatÃ³rios</h2><p class="panel-sub">AnÃ¡lise de vendas por perÃ­odo.</p></div>
+            <div><h2>Relatórios</h2><p class="panel-sub">Análise de vendas por período.</p></div>
             <div class="toolbar-right">
               <input type="date" id="repFrom" class="input-sm">
               <input type="date" id="repTo" class="input-sm">
@@ -307,10 +307,10 @@
             </div>
           </div>
           <div class="kpi-grid">
-            <div class="kpi-card"><div class="kpi-value" id="repRevenue">â€“</div><div class="kpi-label">Receita</div></div>
-            <div class="kpi-card"><div class="kpi-value" id="repOrders">â€“</div><div class="kpi-label">Pedidos</div></div>
-            <div class="kpi-card"><div class="kpi-value" id="repTicket">â€“</div><div class="kpi-label">Ticket mÃ©dio</div></div>
-            <div class="kpi-card"><div class="kpi-value" id="repItems">â€“</div><div class="kpi-label">Itens vendidos</div></div>
+            <div class="kpi-card"><div class="kpi-value" id="repRevenue">–</div><div class="kpi-label">Receita</div></div>
+            <div class="kpi-card"><div class="kpi-value" id="repOrders">–</div><div class="kpi-label">Pedidos</div></div>
+            <div class="kpi-card"><div class="kpi-value" id="repTicket">–</div><div class="kpi-label">Ticket médio</div></div>
+            <div class="kpi-card"><div class="kpi-value" id="repItems">–</div><div class="kpi-label">Itens vendidos</div></div>
           </div>
           <div class="dash-grid">
             <div class="panel"><h3>Top produtos</h3><div id="repTopProducts"></div></div>
@@ -318,10 +318,10 @@
           </div>
         </section>
 
-        <!-- â•â•â•â• ROTA: AVALIAÃ‡Ã•ES â•â•â•â• -->
+        <!-- ════ ROTA: AVALIAÇÕES ════ -->
         <section class="panel" data-panel="avaliacoes">
           <div class="panel-toolbar">
-            <div><h2>AvaliaÃ§Ãµes</h2><p class="panel-sub">Modere as avaliaÃ§Ãµes dos clientes.</p></div>
+            <div><h2>Avaliações</h2><p class="panel-sub">Modere as avaliações dos clientes.</p></div>
             <div class="toolbar-right">
               <select id="revFilter" class="input-sm">
                 <option value="">Todas</option>
@@ -331,55 +331,55 @@
             </div>
           </div>
           <div id="revList"></div>
-          <div class="empty-state" id="revEmpty" style="display:none">Nenhuma avaliaÃ§Ã£o.</div>
+          <div class="empty-state" id="revEmpty" style="display:none">Nenhuma avaliação.</div>
         </section>
 
-        <!-- â•â•â•â• ROTA: APARÃŠNCIA â•â•â•â• -->
+        <!-- ════ ROTA: APARÊNCIA ════ -->
         <section class="panel" data-panel="aparencia">
-          <div class="panel-toolbar"><div><h2>AparÃªncia</h2><p class="panel-sub">Personalize o visual do painel.</p></div></div>
+          <div class="panel-toolbar"><div><h2>Aparência</h2><p class="panel-sub">Personalize o visual do painel.</p></div></div>
           <div class="form-grid">
             <label>Tema <select id="appTheme"><option value="light">Claro</option><option value="dark">Escuro</option></select></label>
             <label>Cor de destaque <input type="color" id="appAccent" value="#c99a3e"></label>
           </div>
-          <div class="actions"><button class="btn btn-primary" id="appSave">Salvar aparÃªncia</button></div>
+          <div class="actions"><button class="btn btn-primary" id="appSave">Salvar aparência</button></div>
         </section>
 
-        <!-- â•â•â•â• ROTA: EQUIPE â•â•â•â• -->
+        <!-- ════ ROTA: EQUIPE ════ -->
         <section class="panel" data-panel="equipe">
           <div class="panel-toolbar">
-            <div><h2>Equipe</h2><p class="panel-sub">Membros e permissÃµes.</p></div>
+            <div><h2>Equipe</h2><p class="panel-sub">Membros e permissões.</p></div>
             <div class="toolbar-right"><button class="btn btn-primary btn-sm" id="teamNew"><i class="fas fa-plus"></i> Novo Membro</button></div>
           </div>
           <div class="table-wrap">
             <table class="data-table" id="teamTable">
-              <thead><tr><th>Nome</th><th>Email</th><th>Papel</th><th>Ativo</th><th>AÃ§Ãµes</th></tr></thead>
+              <thead><tr><th>Nome</th><th>Email</th><th>Papel</th><th>Ativo</th><th>Ações</th></tr></thead>
               <tbody id="teamTbody"></tbody>
             </table>
           </div>
           <div class="empty-state" id="teamEmpty" style="display:none">Nenhum membro.</div>
         </section>
 
-        <!-- â•â•â•â• ROTA: CONFIGURAÃ‡Ã•ES â•â•â•â• -->
+        <!-- ════ ROTA: CONFIGURAÇÕES ════ -->
         <section class="panel" data-panel="configuracoes">
-          <div class="panel-toolbar"><div><h2>ConfiguraÃ§Ãµes do site</h2><p class="panel-sub">Dados gerais exibidos no site pÃºblico.</p></div></div>
+          <div class="panel-toolbar"><div><h2>Configurações do site</h2><p class="panel-sub">Dados gerais exibidos no site público.</p></div></div>
           <form id="settingsForm" class="form-grid">
-            <label>TÃ­tulo (hero) <input name="heroTitle" maxlength="80"></label>
-            <label>SubtÃ­tulo <input name="heroSubtitle" maxlength="160"></label>
+            <label>Título (hero) <input name="heroTitle" maxlength="80"></label>
+            <label>Subtítulo <input name="heroSubtitle" maxlength="160"></label>
             <label>WhatsApp <input name="whatsapp" maxlength="20"></label>
             <label>Email <input name="email" maxlength="120"></label>
             <label>Texto CTA <input name="ctaTitle" maxlength="80"></label>
             <label>Sub CTA <input name="ctaText" maxlength="180"></label>
-            <label class="span-2">EndereÃ§o <textarea name="address" maxlength="180"></textarea></label>
-            <label class="span-2">WhatsApp padrÃ£o <textarea name="whatsappText" maxlength="200"></textarea></label>
+            <label class="span-2">Endereço <textarea name="address" maxlength="180"></textarea></label>
+            <label class="span-2">WhatsApp padrão <textarea name="whatsappText" maxlength="200"></textarea></label>
           </form>
           <div class="actions"><button class="btn btn-primary" id="settingsSave"><i class="fas fa-save"></i> Salvar</button></div>
         </section>
 
-        <!-- â•â•â•â• ROTA: MEU PLANO â•â•â•â• -->
+        <!-- ════ ROTA: MEU PLANO ════ -->
         <section class="panel" data-panel="plano">
           <div class="panel-toolbar"><div><h2>Meu Plano</h2><p class="panel-sub">Gerencie sua assinatura.</p></div></div>
           <div id="planCard"></div>
-          <h3 class="mt">Planos disponÃ­veis</h3>
+          <h3 class="mt">Planos disponíveis</h3>
           <div class="plan-grid" id="planGrid"></div>
         </section>
 
@@ -387,16 +387,16 @@
     </div>
   </div>
 
-  <!-- â•â•â•â•â•â•â•â•â•â•â• MODAL â•â•â•â•â•â•â•â•â•â•â• -->
+  <!-- ═══════════ MODAL ═══════════ -->
   <div class="modal-overlay" id="modalOverlay">
     <div class="modal" id="modalBox">
-      <div class="modal-head"><h3 id="modalTitle">TÃ­tulo</h3><button class="modal-close" id="modalClose"><i class="fas fa-times"></i></button></div>
+      <div class="modal-head"><h3 id="modalTitle">Título</h3><button class="modal-close" id="modalClose"><i class="fas fa-times"></i></button></div>
       <div class="modal-body" id="modalBody"></div>
       <div class="modal-foot" id="modalFoot"></div>
     </div>
   </div>
 
-  <!-- â•â•â•â•â•â•â•â•â•â•â• LOGIN MODAL â•â•â•â•â•â•â•â•â•â•â• -->
+  <!-- ═══════════ LOGIN MODAL ═══════════ -->
   <div class="login-overlay" id="loginOverlay">
     <div class="login-box">
       <div class="login-logo"><i class="fas fa-church"></i></div>
@@ -409,17 +409,17 @@
     </div>
   </div>
 
-  <!-- â•â•â•â•â•â•â•â•â•â•â• BOTTOM NAV + FAB (mobile) â•â•â•â•â•â•â•â•â•â•â• -->
-  <nav class="m-admin-nav" id="mAdminNav" aria-label="NavegaÃ§Ã£o principal">
-    <button class="mn-item" data-route="dashboard"><i class="fas fa-th-large"></i><span>InÃ­cio</span></button>
+  <!-- ═══════════ BOTTOM NAV + FAB (mobile) ═══════════ -->
+  <nav class="m-admin-nav" id="mAdminNav" aria-label="Navegação principal">
+    <button class="mn-item" data-route="dashboard"><i class="fas fa-th-large"></i><span>Início</span></button>
     <button class="mn-item" data-route="produtos"><i class="fas fa-cube"></i><span>Produtos</span></button>
     <button class="mn-item mn-mid" data-route="pedidos"><i class="fas fa-shopping-bag"></i><span>Vendas</span></button>
-    <button class="mn-item" data-route="relatorios"><i class="fas fa-chart-line"></i><span>RelatÃ³rios</span></button>
+    <button class="mn-item" data-route="relatorios"><i class="fas fa-chart-line"></i><span>Relatórios</span></button>
     <button class="mn-item" id="mnMenu"><i class="fas fa-bars"></i><span>Menu</span></button>
   </nav>
-  <button class="m-fab" id="mFab" style="display:none" type="button" aria-label="AÃ§Ã£o principal"><i class="fas fa-plus" id="mFabIcon"></i></button>
+  <button class="m-fab" id="mFab" style="display:none" type="button" aria-label="Ação principal"><i class="fas fa-plus" id="mFabIcon"></i></button>
 
-  <!-- â•â•â•â•â•â•â•â•â•â•â• TOAST â•â•â•â•â•â•â•â•â•â•â• -->
+  <!-- ═══════════ TOAST ═══════════ -->
   <div class="toast-container" id="toastContainer" aria-live="polite"></div>
 
   <script src="admin.js"></script>
