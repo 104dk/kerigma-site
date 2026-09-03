@@ -4,16 +4,55 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Escola de Teologia Kerigma</title>
+  <meta name="description" content="Escola de Teologia Kerigma: livros, e-books, cursos online e materiais de estudo para formação bíblica e crescimento cristão.">
+  <meta name="theme-color" content="#001a47">
+  <meta property="og:title" content="Escola de Teologia Kerigma">
+  <meta property="og:description" content="Formação teológica, livros, e-books e cursos para aprofundar o conhecimento bíblico.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="hero_logo.jpeg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:url" content="https://escoladeteologiakerigma.vercel.app">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <link rel="canonical" href="https://escoladeteologiakerigma.vercel.app/">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%23001a47'/%3E%3Ctext y='27' font-size='26' fill='%23fff' text-anchor='middle' x='16'%3E⛪%3C/text%3E%3C/svg%3E">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "Escola de Teologia Kerigma",
+    "description": "Formação teológica, livros, e-books e cursos para aprofundar o conhecimento bíblico.",
+    "url": "https://escoladeteologiakerigma.vercel.app",
+    "logo": "https://escoladeteologiakerigma.vercel.app/hero_logo.jpeg",
+    "sameAs": ["https://wa.me/5561981897079"]
+  }
+  </script>
+  <link rel="preload" as="image" href="hero_logo.jpeg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="config.js"></script>
   <style>
+    :root {
+      --color-primary: #001a47;
+      --color-primary-dark: #000d1f;
+      --color-text: #1f2937;
+      --color-muted: #6b7280;
+      --color-border: #e5e7eb;
+      --color-whatsapp: #25D366;
+      --color-whatsapp-dark: #128c7e;
+      --gallery-radius: 420px;
+    }
+
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Inter', sans-serif;
-      color: #1f2937;
+      color: var(--color-text);
       background: #fafafa;
       overflow-x: hidden;
     }
@@ -51,13 +90,13 @@
       padding: 48px 24px;
       text-align: center;
     }
-    .hero-content h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: 12px; line-height: 1.2; color: #001a47; }
-    .hero-content p { font-size: 1.125rem; color: #6b7280; margin-bottom: 32px; line-height: 1.6; }
+    .hero-content h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: 12px; line-height: 1.2; color: var(--color-primary); }
+    .hero-content p { font-size: 1.125rem; color: var(--color-muted); margin-bottom: 32px; line-height: 1.6; }
     .btn-whatsapp {
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      background: #25D366;
+      background: var(--color-whatsapp);
       color: #fff;
       padding: 14px 32px;
       border-radius: 50px;
@@ -69,36 +108,53 @@
     }
     .btn-whatsapp:hover {
       transform: translateY(-2px);
-      background: #128c7e;
+      background: var(--color-whatsapp-dark);
       box-shadow: 0 6px 24px rgba(37,211,102,0.5);
     }
 
-    .section { padding: 64px 24px; max-width: 960px; margin: 0 auto; }
-    #carouselSection { padding-top: 40px; padding-bottom: 20px; }
+    .section { padding: 60px 16px; max-width: 1200px; margin: 0 auto; }
+    #carouselSection { max-width: 100%; padding: 36px 0 28px; }
+    #carouselSection .section-title,
+    #carouselSection .section-subtitle,
+    #carouselSection .carousel3d-controls {
+      padding: 0 16px;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    #gallerySection { max-width: 100%; padding: 36px 0 28px; }
+    #gallerySection .section-title,
+    #gallerySection .section-subtitle,
+    #gallerySection .cylinder-controls {
+      padding: 0 16px;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
     .section-title {
       font-size: 1.75rem;
       font-weight: 700;
       text-align: center;
-      margin-bottom: 8px;
-      color: #001a47;
+      margin-bottom: 6px;
+      color: var(--color-primary);
     }
     .section-subtitle {
       text-align: center;
-      color: #6b7280;
-      margin-bottom: 40px;
+      color: var(--color-muted);
+      margin-bottom: 32px;
       font-size: 1rem;
     }
 
     /* ── Carrossel 3D (Cover Flow) ── */
     .carousel3d-wrap {
       position: relative;
-      height: 480px;
+      height: 440px;
       perspective: 1600px;
       display: flex;
       align-items: center;
       justify-content: center;
       overflow: hidden;
-      margin-bottom: 4px;
+      margin-bottom: 12px;
     }
     .carousel3d-wrap .carousel3d {
       position: relative;
@@ -114,7 +170,7 @@
         top: -200px;
         border-radius: 18px;
         background: #fff;
-        border: 2px solid #e5e7eb;
+        border: 2px solid var(--color-border);
         box-shadow: 0 6px 24px rgba(0,0,0,0.06);
         display: flex;
         flex-direction: column;
@@ -126,57 +182,57 @@
       }
       .carousel3d-wrap .carousel3d .card3d .thumb {
         width: 100%;
-        height: 150px;
+        height: 160px;
         object-fit: cover;
         flex-shrink: 0;
         display: block;
-        background: #001a47;
+        background: var(--color-primary);
       }
       .carousel3d-wrap .carousel3d .card3d .card-body {
         flex: 1;
-        padding: 10px 12px 12px;
+        padding: 12px 14px 14px;
         display: flex;
         flex-direction: column;
-        gap: 3px;
+        gap: 4px;
       }
       .carousel3d-wrap .carousel3d .card3d .card-body .card-title {
-        font-size: 0.8rem;
+        font-size: 0.85rem;
         font-weight: 700;
-        color: #1f2937;
+        color: var(--color-text);
       }
       .carousel3d-wrap .carousel3d .card3d .card-body .card-title i {
         width: 16px;
-        color: #001a47;
+        color: var(--color-primary);
         margin-right: 6px;
       }
       .carousel3d-wrap .carousel3d .card3d .card-body .card-desc {
-        font-size: 0.65rem;
-        color: #6b7280;
-        line-height: 1.25;
+        font-size: 0.7rem;
+        color: var(--color-muted);
+        line-height: 1.3;
         display: -webkit-box;
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
         overflow: hidden;
-        margin-bottom: 1px;
+        margin-bottom: 2px;
       }
       .carousel3d-wrap .carousel3d .card3d .card-body .card-items {
         list-style: none;
-        margin: 0;
+        margin: 2px 0;
         padding: 0;
       }
       .carousel3d-wrap .carousel3d .card3d .card-body .card-items li {
-        font-size: 0.6rem;
+        font-size: 0.65rem;
         color: #4b5563;
-        padding: 0;
+        padding: 1px 0;
         line-height: 1.3;
       }
       .carousel3d-wrap .carousel3d .card3d .card-body .card-items li::before {
         content: '\f00c';
         font-family: 'Font Awesome 6 Free';
         font-weight: 900;
-        font-size: 0.5rem;
-        color: #001a47;
-        margin-right: 4px;
+        font-size: 0.55rem;
+        color: var(--color-primary);
+        margin-right: 5px;
       }
       .carousel3d-wrap .carousel3d .card3d .card-body .card-cta {
         margin-top: auto;
@@ -184,18 +240,18 @@
         align-items: center;
         justify-content: center;
         gap: 6px;
-        background: #25D366;
+        background: var(--color-whatsapp);
         color: #fff;
-        padding: 6px 14px;
+        padding: 8px 16px;
         border-radius: 50px;
-        font-size: 0.65rem;
+        font-size: 0.7rem;
         font-weight: 700;
         text-decoration: none;
-        transition: background .2s;
+        transition: background .2s, transform .2s;
       }
-      .carousel3d-wrap .carousel3d .card3d .card-body .card-cta:hover { background: #128c7e; }
+      .carousel3d-wrap .carousel3d .card3d .card-body .card-cta:hover { background: var(--color-whatsapp-dark); transform: translateY(-1px); }
       .carousel3d-wrap .carousel3d .card3d.active {
-        border-color: #001a47;
+        border-color: var(--color-primary);
         box-shadow: 0 10px 40px rgba(0,26,71,0.22);
       }
       .carousel3d-wrap .carousel3d .card3d.active .thumb { filter: brightness(1.05); }
@@ -208,31 +264,235 @@
       margin-top: 0;
     }
     .carousel3d-controls .arr {
-      width: 40px;
-      height: 40px;
+      width: 38px;
+      height: 38px;
       border-radius: 50%;
-      border: 1px solid #e5e7eb;
+      border: 1px solid var(--color-border);
       background: #fff;
-      color: #374151;
-      font-size: 16px;
+      color: #4b5563;
+      font-size: 15px;
       cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: all .2s;
+      transition: all .25s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
     }
-    .carousel3d-controls .arr:hover { border-color: #001a47; color: #001a47; background: #eef2ff; }
-    .carousel3d-controls .dots { display: flex; gap: 8px; }
+    .carousel3d-controls .arr:hover { border-color: var(--color-primary); color: #fff; background: var(--color-primary); box-shadow: 0 4px 12px rgba(0,26,71,0.2); }
+    .carousel3d-controls .dots { display: flex; gap: 6px; }
     .carousel3d-controls .dots .dot {
-      width: 8px;
-      height: 8px;
+      width: 7px;
+      height: 7px;
       border-radius: 50%;
       background: #d1d5db;
       cursor: pointer;
       transition: all .3s;
+      border: 0;
+      padding: 0;
     }
-    .carousel3d-controls .dots .dot.active { background: #001a47; width: 24px; border-radius: 4px; }
-    .carousel3d-controls .dots .dot:hover { background: #001a47; }
+    .carousel3d-controls .dots .dot.active { background: var(--color-primary); width: 20px; border-radius: 4px; }
+    .carousel3d-controls .dots .dot:hover { background: var(--color-primary); }
+
+    /* ── Filtro por categoria ── */
+    .cat-filter {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      margin: 4px auto 22px;
+      max-width: 900px;
+      padding: 0 12px;
+    }
+    .cat-filter .cat-btn {
+      border: 1px solid var(--color-primary);
+      background: transparent;
+      color: var(--color-primary);
+      font-family: inherit;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 7px 16px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    }
+    .cat-filter .cat-btn:hover { background: var(--color-primary); color: #fff; }
+    .cat-filter .cat-btn.active { background: var(--color-primary); color: #fff; box-shadow: 0 4px 12px rgba(0,26,71,0.25); }
+
+    /* ── Stage Carousel (Galeria) ── */
+    .cylinder-wrap {
+      position: relative;
+      height: 420px;
+      perspective: 1200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .cylinder-wrap .cylinder {
+      position: relative;
+      width: 0;
+      height: 0;
+      transform-style: preserve-3d;
+    }
+    .cylinder-wrap .cylinder .photo-card {
+      position: absolute;
+      width: 300px;
+      height: 200px;
+      left: -150px;
+      top: -100px;
+      border-radius: 14px;
+      overflow: hidden;
+      cursor: pointer;
+      backface-visibility: hidden;
+      border: 3px solid var(--color-border);
+      box-shadow: 0 6px 24px rgba(0,0,0,0.1);
+      transition: border-color .3s, box-shadow .3s;
+    }
+    .cylinder-wrap .cylinder .photo-card.active {
+      border-color: var(--color-primary);
+      box-shadow: 0 12px 48px rgba(0,26,71,0.35);
+      cursor: zoom-in;
+    }
+    .cylinder-wrap .cylinder .photo-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      background: var(--color-primary);
+    }
+    .cylinder-wrap .cylinder .photo-card.portrait img {
+      object-fit: contain;
+    }
+    .cylinder-wrap .cylinder .photo-card.portrait {
+      border-color: rgba(245,158,11,0.4);
+    }
+    .cylinder-wrap .cylinder .photo-card .photo-label {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 10px 12px 8px;
+      background: linear-gradient(transparent 20%, rgba(0,0,0,0.7));
+      color: #fff;
+      font-size: 0.7rem;
+      font-weight: 500;
+      text-align: center;
+      opacity: 0.35;
+      transition: opacity .4s, font-size .3s;
+    }
+    .cylinder-wrap .cylinder .photo-card.active .photo-label {
+      opacity: 1;
+      font-size: 0.85rem;
+      font-weight: 700;
+      padding: 14px 16px 10px;
+      letter-spacing: 0.5px;
+    }
+    .cylinder-controls {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      margin-top: 12px;
+    }
+    .cylinder-controls .arr {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      border: 1px solid var(--color-border);
+      background: #fff;
+      color: #4b5563;
+      font-size: 15px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all .25s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+    .cylinder-controls .arr:hover { border-color: var(--color-primary); color: #fff; background: var(--color-primary); box-shadow: 0 4px 12px rgba(0,26,71,0.2); }
+    .cylinder-controls .dots { display: flex; gap: 5px; }
+    .cylinder-controls .dots .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #d1d5db;
+      cursor: pointer;
+      transition: all .3s;
+      border: 0;
+      padding: 0;
+    }
+    .cylinder-controls .dots .dot.active { background: var(--color-primary); width: 16px; border-radius: 3px; }
+    .cylinder-controls .dots .dot:hover { background: var(--color-primary); }
+    .gal-counter {
+      font-size: 0.75rem;
+      color: #9ca3af;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      min-width: 36px;
+      text-align: center;
+    }
+
+    /* ── Lightbox ── */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 10000;
+      background: rgba(0,0,0,0.85);
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox .lb-close {
+      position: absolute;
+      top: 20px;
+      right: 24px;
+      color: #fff;
+      font-size: 32px;
+      cursor: pointer;
+      opacity: 0.7;
+      transition: opacity .2s;
+      background: none;
+      border: 0;
+      line-height: 1;
+    }
+    .lightbox .lb-close:hover { opacity: 1; }
+    .lightbox .lb-img {
+      max-width: 90vw;
+      max-height: 80vh;
+      border-radius: 8px;
+      object-fit: contain;
+      display: block;
+    }
+    .lightbox .lb-arr {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.12);
+      border: 0;
+      color: #fff;
+      font-size: 20px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background .2s;
+    }
+    .lightbox .lb-arr:hover { background: rgba(255,255,255,0.25); }
+    .lightbox .lb-arr.lb-prev { left: 20px; }
+    .lightbox .lb-arr.lb-next { right: 20px; }
+    .lightbox .lb-counter {
+      position: absolute;
+      bottom: 24px;
+      color: rgba(255,255,255,0.6);
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+    }
 
     .trust-bar {
       background: white;
@@ -248,12 +508,12 @@
       gap: 24px;
       text-align: center;
     }
-    .trust-item i { font-size: 28px; color: #001a47; margin-bottom: 8px; }
+    .trust-item i { font-size: 28px; color: var(--color-primary); margin-bottom: 8px; }
     .trust-item h4 { font-size: 1.125rem; font-weight: 600; }
-    .trust-item p { color: #6b7280; font-size: 0.875rem; }
+    .trust-item p { color: var(--color-muted); font-size: 0.875rem; }
 
     .cta-section {
-      background: linear-gradient(135deg, #001a47, #000d1f);
+      background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
       color: white;
       text-align: center;
       padding: 64px 24px;
@@ -266,7 +526,7 @@
       right: 24px;
       top: 50%;
       transform: translateY(-50%);
-      background: #25D366;
+      background: var(--color-whatsapp);
       color: white;
       width: 60px;
       height: 60px;
@@ -286,6 +546,7 @@
     }
 
     footer {
+      position: relative;
       background: #111827;
       color: rgba(255,255,255,0.6);
       text-align: center;
@@ -294,22 +555,256 @@
     }
     footer a { color: rgba(255,255,255,0.8); text-decoration: none; }
     footer a:hover { color: white; }
+    .footer-address { margin-top: 4px; }
+    .footer-gear {
+      position: absolute;
+      right: 18px;
+      bottom: 16px;
+      color: rgba(255,255,255,0.28);
+      font-size: 14px;
+      line-height: 1;
+      text-decoration: none;
+      transition: color .2s, transform .2s;
+    }
+    .footer-gear:hover,
+    .footer-gear:focus-visible {
+      color: rgba(255,255,255,0.72);
+      transform: rotate(24deg);
+    }
+    .arr:focus-visible,
+    .dot:focus-visible,
+    .btn-whatsapp:focus-visible,
+    .whatsapp-fab:focus-visible,
+    .footer-gear:focus-visible {
+      outline: 3px solid rgba(251,191,36,0.85);
+      outline-offset: 3px;
+    }
 
-    @media (max-width: 700px) {
-      .carousel3d-wrap { height: 360px; perspective: 1200px; }
-      .carousel3d-wrap .carousel3d .card3d { width: 190px; height: 280px; left: -95px; top: -140px; border-radius: 14px; }
-      .carousel3d-wrap .carousel3d .card3d .thumb { height: 100px; }
-      .carousel3d-wrap .carousel3d .card3d .card-body { padding: 6px 10px 10px; gap: 2px; }
-      .carousel3d-wrap .carousel3d .card3d .card-body .card-title { font-size: 0.7rem; }
+    @media (max-width: 900px) {
+      :root { --gallery-radius: 300px; }
+      #carouselSection { padding-top: 24px; padding-bottom: 22px; }
+      #gallerySection { padding-top: 28px; padding-bottom: 24px; }
+      .carousel3d-wrap { height: 390px; perspective: 1200px; }
+      .carousel3d-wrap .carousel3d .card3d { width: 230px; height: 330px; left: -115px; top: -165px; border-radius: 14px; }
+      .carousel3d-wrap .carousel3d .card3d .thumb { height: 118px; }
+      .carousel3d-wrap .carousel3d .card3d .card-body { padding: 8px 10px 10px; gap: 2px; }
+      .carousel3d-wrap .carousel3d .card3d .card-body .card-title { font-size: 0.72rem; }
       .carousel3d-wrap .carousel3d .card3d .card-body .card-desc { font-size: 0.6rem; }
-      .carousel3d-wrap .carousel3d .card3d .card-body .card-items li { font-size: 0.55rem; }
-      .carousel3d-wrap .carousel3d .card3d .card-body .card-cta { font-size: 0.6rem; padding: 5px 10px; }
-      #carouselSection { padding-top: 32px; padding-bottom: 16px; }
+      .carousel3d-wrap .carousel3d .card3d .card-body .card-items li { font-size: 0.56rem; }
+      .carousel3d-wrap .carousel3d .card3d .card-body .card-cta { font-size: 0.6rem; padding: 7px 10px; min-height: 34px; }
+      .cylinder-wrap { height: 360px; perspective: 1400px; }
+      .cylinder-wrap .cylinder .photo-card { width: 220px; height: 150px; left: -110px; top: -75px; border-radius: 10px; }
+      .cylinder-controls { margin-top: 8px; }
+      .carousel3d-controls .arr, .cylinder-controls .arr { width: 44px; height: 44px; font-size: 16px; }
+      .carousel3d-controls .dots .dot, .cylinder-controls .dots .dot { width: 10px; height: 10px; }
+      .carousel3d-controls .dots .dot.active, .cylinder-controls .dots .dot.active { width: 24px; }
     }
     @media (max-width: 640px) {
+      :root { --gallery-radius: 240px; }
       .hero { min-height: 240px; }
       .hero-content h1 { font-size: 1.75rem; }
-      .section { padding: 48px 20px; }
+      .section { padding: 40px 12px; }
+      #carouselSection { padding-top: 16px; padding-bottom: 16px; }
+      #gallerySection { padding-top: 22px; padding-bottom: 20px; }
+      .section-subtitle { margin-bottom: 20px; }
+      .carousel3d-wrap { height: 350px; perspective: 1000px; }
+      .carousel3d-wrap .carousel3d .card3d { width: 210px; height: 306px; left: -105px; top: -153px; }
+      .carousel3d-wrap .carousel3d .card3d .thumb { height: 108px; }
+      .carousel3d-wrap .carousel3d .card3d .card-body .card-title { font-size: 0.78rem; }
+      .carousel3d-wrap .carousel3d .card3d .card-body .card-desc { font-size: 0.64rem; }
+      .carousel3d-wrap .carousel3d .card3d .card-body .card-items li { font-size: 0.62rem; }
+      .carousel3d-wrap .carousel3d .card3d .card-body .card-cta { font-size: 0.68rem; }
+      .cylinder-wrap { height: 280px; perspective: 1200px; }
+      .cylinder-wrap .cylinder .photo-card { width: 170px; height: 120px; left: -85px; top: -60px; }
+      .cylinder-wrap .cylinder .photo-card .photo-label { font-size: 0.62rem; }
+      .cylinder-controls { margin-top: 6px; }
+      .whatsapp-fab { width: 56px; height: 56px; font-size: 26px; bottom: 16px; right: 16px; top: auto; transform: none; box-shadow: 0 4px 18px rgba(37,211,102,0.45); }
+      .whatsapp-fab:hover { transform: scale(1.08); }
+      .footer-gear { right: 12px; bottom: 12px; }
+    }
+
+    /* ── Bottom nav mobile ── */
+    .m-bottomnav {
+      display: none;
+      position: fixed; left: 0; right: 0; bottom: 0; z-index: 950;
+      background: #fff; border-top: 1px solid var(--color-border);
+      box-shadow: 0 -6px 24px rgba(0,0,0,0.08);
+      padding: 6px 4px calc(6px + env(safe-area-inset-bottom));
+      grid-template-columns: repeat(5, 1fr);
+    }
+    .mb-item {
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 3px; min-height: 50px; border: 0; background: transparent;
+      color: var(--color-muted); font-family: inherit; font-size: 0.62rem; font-weight: 600;
+      cursor: pointer; border-radius: 12px; -webkit-tap-highlight-color: transparent;
+    }
+    .mb-item i { font-size: 1.15rem; line-height: 1; }
+    .mb-item.mb-active { color: var(--color-primary); }
+    .mb-item.mb-central {
+      background: var(--color-whatsapp); color: #fff; border-radius: 999px;
+      margin: -18px 6px 0; padding-top: 8px; box-shadow: 0 6px 18px rgba(37,211,102,0.45);
+    }
+    .mb-item.mb-central i { font-size: 1.4rem; }
+    .mb-item:active { opacity: 0.8; }
+
+    /* ── Grid de materiais ── */
+    #materialsSection { padding-top: 8px; }
+    .mat-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 16px; margin-top: 8px;
+    }
+    .mat-card {
+      background: #fff; border: 1px solid var(--color-border); border-radius: 16px;
+      overflow: hidden; cursor: pointer; position: relative;
+      display: flex; flex-direction: column;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+      transition: transform .18s, box-shadow .18s;
+    }
+    .mat-card:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(0,26,71,0.14); }
+    .mat-card:active { transform: scale(0.985); }
+    .mat-card .mat-thumb { width: 100%; height: 150px; object-fit: cover; background: #eef2f7; display: block; }
+    .mat-card .mat-badge {
+      position: absolute; top: 10px; left: 10px; background: rgba(0,26,71,0.88); color: #fff;
+      font-size: 0.62rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;
+      padding: 4px 9px; border-radius: 999px;
+    }
+    .mat-card .mat-badge.feat { background: var(--color-primary); }
+    .mat-card .mat-body { padding: 12px 14px 14px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
+    .mat-card .mat-type { font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.6px; color: var(--color-muted); font-weight: 700; }
+    .mat-card .mat-name { font-weight: 800; color: var(--color-primary); font-size: 0.98rem; line-height: 1.25; }
+    .mat-card .mat-desc { font-size: 0.8rem; color: var(--color-muted); line-height: 1.45; -webkit-line-clamp: 2; display: -webkit-box; -webkit-box-orient: vertical; overflow: hidden; }
+    .mat-card .mat-foot { margin-top: auto; display: flex; align-items: center; justify-content: space-between; padding-top: 8px; }
+    .mat-card .mat-price { font-weight: 800; color: var(--color-primary); font-size: 1.05rem; }
+    .mat-card .mat-price.na { font-size: 0.74rem; color: var(--color-whatsapp-dark); font-weight: 700; }
+    .mat-card .mat-cta-cue { color: var(--color-muted); font-size: 0.78rem; display: inline-flex; align-items: center; gap: 5px; }
+
+    @media (max-width: 768px) {
+      .m-bottomnav { display: grid; }
+      .whatsapp-fab { bottom: 76px; top: auto; transform: none; }
+      .whatsapp-fab:hover { transform: scale(1.08); }
+      .mat-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+      .mat-card .mat-thumb { height: 120px; }
+    }
+    @media (max-width: 640px) {
+      .mat-grid { gap: 10px; }
+      .mat-card .mat-thumb { height: 108px; }
+      .mat-card .mat-body { padding: 10px 12px 12px; }
+      .mat-card .mat-name { font-size: 0.9rem; }
+      .mat-card .mat-desc { font-size: 0.74rem; }
+      .m-bottomnav { font-size: 0.6rem; }
+      .mb-item { font-size: 0.6rem; min-height: 48px; }
+      .mb-item i { font-size: 1.05rem; }
+      /* touch targets */
+      .carousel3d-controls .arr, .cylinder-controls .arr { width: 48px; height: 48px; }
+      .cat-filter .cat-btn { min-height: 42px; padding: 10px 16px; font-size: 0.8rem; }
+      .pmodal .pm-btn { min-height: 48px; }
+      .pmodal-close { width: 40px; height: 40px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    /* ── Detalhe de produto + Avaliações ── */
+    .pmodal-overlay {
+      display: none; position: fixed; inset: 0; z-index: 9000;
+      background: rgba(0, 13, 31, 0.6); align-items: center; justify-content: center;
+      padding: 20px; overflow-y: auto;
+    }
+    .pmodal-overlay.open { display: flex; }
+    .pmodal {
+      background: #fff; color: var(--color-text); border-radius: 18px;
+      max-width: 780px; width: 100%; max-height: calc(100vh - 40px);
+      overflow-y: auto; position: relative; box-shadow: 0 24px 60px rgba(0,0,0,0.35);
+      animation: pmFade .25s ease;
+    }
+    @keyframes pmFade { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+    .pmodal-close {
+      position: absolute; top: 14px; right: 14px; z-index: 2;
+      width: 36px; height: 36px; border-radius: 50%; background: #fff; color: #001a47;
+      font-size: 18px; box-shadow: 0 2px 10px rgba(0,0,0,0.18); cursor: pointer;
+    }
+    .pmodal-grid { display: grid; grid-template-columns: 300px 1fr; }
+    .pmodal-thumb { width: 100%; height: 100%; min-height: 300px; object-fit: cover; background: #eef2f7; }
+    .pmodal-body { padding: 26px; }
+    .pmodal-type {
+      display: inline-block; background: #eef2f7; color: #001a47; font-weight: 700;
+      font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.6px;
+      padding: 4px 11px; border-radius: 999px; margin-bottom: 10px;
+    }
+    .pmodal-title { font-size: 1.45rem; font-weight: 800; color: #001a47; line-height: 1.2; }
+    .pmodal-desc { color: var(--color-muted); margin: 10px 0 14px; line-height: 1.6; font-size: 0.95rem; }
+    .pmodal-price { font-size: 1.6rem; font-weight: 800; color: #001a47; margin-bottom: 4px; }
+    .pmodal-items { list-style: none; margin: 14px 0; display: grid; gap: 7px; }
+    .pmodal-items li { display: flex; align-items: center; gap: 9px; font-size: 0.9rem; }
+    .pmodal-items li::before { content: '\2713'; color: #128c7e; font-weight: 800; }
+    .pmodal-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 8px; }
+    .pm-btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 9px;
+      padding: 13px 22px; border-radius: 50px; font-size: 0.95rem; font-weight: 700;
+      text-decoration: none; border: 0; cursor: pointer; transition: transform .18s, box-shadow .18s, background .18s;
+    }
+    .pm-btn:hover { transform: translateY(-2px); }
+    .pm-btn.wa { background: #25D366; color: #fff; box-shadow: 0 4px 16px rgba(37,211,102,0.35); }
+    .pm-btn.wa:hover { background: #128c7e; }
+    .pm-btn.buy { background: #001a47; color: #fff; box-shadow: 0 4px 16px rgba(0,26,71,0.35); }
+    .pm-btn.buy:hover { background: #000d1f; }
+    .pm-rating { display: flex; align-items: center; gap: 8px; margin-top: 18px; padding-top: 16px; border-top: 1px solid #eee; }
+    .pm-stars { color: #fbbf24; font-size: 1rem; letter-spacing: 1px; }
+    .pm-rev-count { font-size: 0.8rem; color: var(--color-muted); }
+    .pm-reviews { margin-top: 14px; display: grid; gap: 12px; }
+    .pm-review { padding: 13px 15px; background: #f8fafc; border: 1px solid #eee; border-radius: 12px; }
+    .pm-review-head { display: flex; justify-content: space-between; align-items: center; font-size: 0.82rem; }
+    .pm-review-head strong { color: #001a47; }
+    .pm-review .pm-stars { font-size: 0.82rem; }
+    .pm-review p { margin-top: 5px; font-size: 0.88rem; color: var(--color-text); line-height: 1.5; }
+    .pm-form { margin-top: 16px; background: #001a47; color: #fff; border-radius: 14px; padding: 18px; }
+    .pm-form h4 { font-size: 0.95rem; margin-bottom: 12px; }
+    .pm-form input[type="text"] {
+      width: 100%; min-height: 42px; border-radius: 9px; border: 0; padding: 9px 13px;
+      font: inherit; font-size: 0.9rem; margin-bottom: 10px;
+    }
+    .pm-star-input { display: flex; gap: 6px; margin-bottom: 10px; font-size: 1.6rem; }
+    .pm-star-input .star { cursor: pointer; color: #4b5a77; transition: color .15s; user-select: none; }
+    .pm-star-input .star.on { color: #fbbf24; }
+    .pm-form textarea {
+      width: 100%; min-height: 74px; border-radius: 9px; border: 0; padding: 9px 13px;
+      font: inherit; font-size: 0.9rem; resize: vertical; margin-bottom: 12px;
+    }
+    .pm-form-submit { background: #fbbf24; color: #001a47; font-weight: 800; }
+    .pm-form-submit:hover { background: #c99a3e; }
+    .pm-note { font-size: 0.75rem; opacity: 0.8; margin-top: 10px; }
+    .pm-review-empty { color: var(--color-muted); font-size: 0.85rem; }
+    .pm-no-price { display:inline-block; margin-top: 4px; font-size:0.82rem; color:#128c7e; font-weight:700; }
+    @media (max-width: 720px) {
+      .pmodal-grid { grid-template-columns: 1fr; }
+      .pmodal-thumb { min-height: 200px; max-height: 260px; }
+      .pmodal-body { padding: 20px; }
+    }
+    @media (max-width: 768px) {
+      .pmodal-overlay { align-items: flex-end; justify-content: center; padding: 0; }
+      .pmodal {
+        max-width: 100%; width: 100%; max-height: 92vh;
+        border-radius: 20px 20px 0 0;
+        transform: translateY(100%);
+        animation: none;
+        transition: transform .32s cubic-bezier(.32,.72,.28,1);
+      }
+      .pmodal-overlay.open .pmodal { transform: translateY(0); }
+      .pmodal::before {
+        content: ''; position: sticky; top: 0; z-index: 3; display: block;
+        width: 44px; height: 5px; border-radius: 999px; background: #d1d5db;
+        margin: 9px auto 0;
+      }
+      .pmodal-thumb { min-height: 0; max-height: 40vh; height: 240px; }
+      .pmodal-close { top: 54px; }
     }
   </style>
 </head>
@@ -319,23 +814,54 @@
     <div class="hero-overlay"></div>
   </section>
   <div class="hero-content">
-    <h1>Escola de Teologia Kerigma</h1>
-    <p>Transformando vidas através do conhecimento bíblico. Livros, e-books e cursos teológicos.</p>
-    <a href="https://wa.me/5561981897079?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Escola%20de%20Teologia%20Kerigma." target="_blank" class="btn-whatsapp">
+    <h1 id="heroTitle">Escola de Teologia Kerigma</h1>
+    <p id="heroSubtitle">Transformando vidas através do conhecimento bíblico. Livros, e-books e cursos teológicos.</p>
+    <a href="https://wa.me/5561981897079?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Escola%20de%20Teologia%20Kerigma." target="_blank" rel="noopener noreferrer" class="btn-whatsapp" id="heroCta">
       <i class="fab fa-whatsapp"></i> Fale conosco
     </a>
   </div>
 
   <section class="section" id="carouselSection">
+    <h2 class="section-title">Formação e materiais teológicos</h2>
+    <p class="section-subtitle">Escolha o formato ideal para estudar com profundidade e praticidade</p>
+    <div class="cat-filter" id="catFilter" role="tablist" aria-label="Filtrar materiais por categoria"></div>
     <div class="carousel3d-wrap" id="carouselWrap">
       <div class="carousel3d" id="carousel3d"></div>
     </div>
     <div class="carousel3d-controls">
-      <button class="arr" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+      <button class="arr" id="prevBtn" type="button" aria-label="Item anterior do carrossel de materiais"><i class="fas fa-chevron-left"></i></button>
       <div class="dots" id="dots"></div>
-      <button class="arr" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+      <button class="arr" id="nextBtn" type="button" aria-label="Próximo item do carrossel de materiais"><i class="fas fa-chevron-right"></i></button>
     </div>
   </section>
+
+  <section class="section" id="materialsSection">
+    <h2 class="section-title">Nossos materiais</h2>
+    <p class="section-subtitle">Catalogamos tudo em um só lugar — toque para ver detalhes e preços</p>
+    <div class="mat-grid" id="matGrid"></div>
+  </section>
+
+  <section class="section" id="gallerySection">
+    <h2 class="section-title">Galeria de Fotos</h2>
+    <p class="section-subtitle">Registros dos nossos eventos e encontros</p>
+    <div class="cylinder-wrap" id="cylinderWrap">
+      <div class="cylinder" id="cylinder"></div>
+    </div>
+    <div class="cylinder-controls">
+      <button class="arr" id="galPrev" type="button" aria-label="Foto anterior da galeria"><i class="fas fa-chevron-left"></i></button>
+      <div class="dots" id="galDots"></div>
+      <span class="gal-counter" id="galCounter"></span>
+      <button class="arr" id="galNext" type="button" aria-label="Próxima foto da galeria"><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </section>
+
+  <div class="lightbox" id="lightbox">
+    <button class="lb-close" id="lbClose" aria-label="Fechar">&times;</button>
+    <button class="lb-arr lb-prev" id="lbPrev" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+    <img class="lb-img" id="lbImg" src="" alt="">
+    <button class="lb-arr lb-next" id="lbNext" aria-label="Próximo"><i class="fas fa-chevron-right"></i></button>
+    <span class="lb-counter" id="lbCounter"></span>
+  </div>
 
   <section class="trust-bar">
     <div class="trust-grid">
@@ -358,42 +884,198 @@
   </section>
 
   <section class="cta-section">
-    <h2>Comece sua jornada teológica hoje</h2>
-    <p>Entre em contato e descubra como podemos ajudar no seu crescimento espiritual e acadêmico.</p>
-    <a href="https://wa.me/5561981897079?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Escola%20de%20Teologia%20Kerigma." target="_blank" class="btn-whatsapp" style="background:#25D366;box-shadow:0 4px 16px rgba(37,211,102,0.35);">
+    <h2 id="ctaTitle">Comece sua jornada teológica hoje</h2>
+    <p id="ctaText">Entre em contato e descubra como podemos ajudar no seu crescimento espiritual e acadêmico.</p>
+    <a href="https://wa.me/5561981897079?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Escola%20de%20Teologia%20Kerigma." target="_blank" rel="noopener noreferrer" class="btn-whatsapp" id="ctaBtn">
       <i class="fab fa-whatsapp"></i> Quero saber mais
     </a>
   </section>
 
   <footer>
     <p>&copy; 2026 Escola de Teologia Kerigma — Todos os direitos reservados</p>
-    <p style="margin-top:4px;"><i class="fas fa-map-marker-alt"></i> Rua 2, Quadra 34, Lote 30 — Jardim Europa — Luziânia, GO — CEP 72855-852</p>
+    <p class="footer-address" id="footerAddress"><i class="fas fa-map-marker-alt"></i> Rua 2, Quadra 34, Lote 30 — Jardim Europa — Luziânia, GO — CEP 72855-852</p>
+    <a class="footer-gear" href="configuracoes.html" aria-label="Abrir configurações dos carrosséis">
+      <i class="fas fa-gear"></i>
+    </a>
   </footer>
 
-  <a href="https://wa.me/5561981897079?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Escola%20de%20Teologia%20Kerigma." target="_blank" class="whatsapp-fab" aria-label="WhatsApp">
+  <a href="https://wa.me/5561981897079?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Escola%20de%20Teologia%20Kerigma." target="_blank" rel="noopener noreferrer" class="whatsapp-fab" aria-label="WhatsApp" id="whatsappFab">
     <i class="fab fa-whatsapp"></i>
   </a>
 
+  <nav class="m-bottomnav" id="mBottomNav" aria-label="Navegação do site">
+    <button class="mb-item mb-active" data-target="top" type="button"><i class="fas fa-home"></i><span>Início</span></button>
+    <button class="mb-item" data-target="materials" type="button"><i class="fas fa-cubes"></i><span>Materiais</span></button>
+    <a class="mb-item mb-central" href="https://wa.me/5561981897079?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Site%20da%20Escola%20de%20Teologia%20Kerigma." target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp">
+      <i class="fab fa-whatsapp"></i><span>WhatsApp</span>
+    </a>
+    <button class="mb-item" data-target="gallery" type="button"><i class="fas fa-images"></i><span>Galeria</span></button>
+    <button class="mb-item" data-target="bottom" type="button"><i class="fas fa-chevron-down"></i><span>Contato</span></button>
+  </nav>
+
+  <div class="pmodal-overlay" id="pmodalOverlay" aria-hidden="true">
+    <div class="pmodal" role="dialog" aria-modal="true" aria-labelledby="pmTitle">
+      <button class="pmodal-close" id="pmClose" aria-label="Fechar detalhe">&times;</button>
+      <div class="pmodal-grid">
+        <img class="pmodal-thumb" id="pmImg" src="" alt="">
+        <div class="pmodal-body">
+          <span class="pmodal-type" id="pmType"></span>
+          <h2 class="pmodal-title" id="pmTitle"></h2>
+          <p class="pmodal-desc" id="pmDesc"></p>
+          <div class="pmodal-price" id="pmPrice"></div>
+          <span class="pm-no-price" id="pmNoPrice" style="display:none">Consulte valores no WhatsApp.</span>
+          <ul class="pmodal-items" id="pmItems"></ul>
+          <div class="pmodal-actions">
+            <a class="pm-btn wa" id="pmWa" href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> Falar no WhatsApp</a>
+            <a class="pm-btn buy" id="pmBuy" href="#" target="_blank" rel="noopener noreferrer" style="display:none"><i class="fas fa-shopping-bag"></i> Comprar agora</a>
+          </div>
+          <div class="pm-rating">
+            <span class="pm-stars" id="pmAvgStars">☆☆☆☆☆</span>
+            <span class="pm-rev-count" id="pmRevCount"></span>
+          </div>
+          <div class="pm-reviews" id="pmReviews"></div>
+          <form class="pm-form" id="pmForm">
+            <h4><i class="fas fa-star"></i> Avalie este material</h4>
+            <input type="text" id="pmName" placeholder="Seu nome" maxlength="80" required>
+            <div class="pm-star-input" id="pmStarInput">
+              <span class="star" data-v="1">☆</span><span class="star" data-v="2">☆</span><span class="star" data-v="3">☆</span><span class="star" data-v="4">☆</span><span class="star" data-v="5">☆</span>
+            </div>
+            <textarea id="pmComment" placeholder="Conte sua experiência (opcional)" maxlength="500"></textarea>
+            <button type="submit" class="pm-btn buy pm-form-submit"><i class="fas fa-paper-plane"></i> Enviar avaliação</button>
+            <p class="pm-note">Sua avaliação passará por moderação antes de aparecer publicamente.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script>
-    const services = [
-      { icon: 'fa-book-bible', title: 'Livros Teol\u00f3gicos', desc: 'Livros teol\u00f3gicos para aprofundar seu conhecimento da Palavra.', image: 'https://picsum.photos/seed/kerigma-livros/520/400', whatsapp: 'Ol\u00e1! Tenho interesse nos Livros Teol\u00f3gicos. Poderia me enviar mais informa\u00e7\u00f5es?', items: ['B\u00edblias de estudo','Teologia sistem\u00e1tica','Hist\u00f3ria da Igreja','Hermen\u00eautica b\u00edblica','Aconselhamento pastoral'] },
-      { icon: 'fa-tablet-alt', title: 'E-books', desc: 'E-books pr\u00e1ticos e acess\u00edveis para estudo em qualquer lugar.', image: 'https://picsum.photos/seed/kerigma-ebooks/520/400', whatsapp: 'Ol\u00e1! Tenho interesse nos E-books. Poderia me enviar mais informa\u00e7\u00f5es?', items: ['E-books de teologia','Guias de estudo b\u00edblico','Devocionais','Apostilas de cursos','Lideran\u00e7a crist\u00e3'] },
-      { icon: 'fa-video', title: 'Cursos Online', desc: 'Cursos online com certificado para sua forma\u00e7\u00e3o teol\u00f3gica.', image: 'https://picsum.photos/seed/kerigma-cursos/520/400', whatsapp: 'Ol\u00e1! Tenho interesse nos Cursos Online. Poderia me enviar mais informa\u00e7\u00f5es?', items: ['Teologia B\u00e1sica','Hermen\u00eautica','Lideran\u00e7a','Hist\u00f3ria da Igreja','Escatologia'] },
-      { icon: 'fa-pen-fancy', title: 'Materiais de Estudo', desc: 'Materiais complementares para grupos de estudo.', image: 'https://picsum.photos/seed/kerigma-estudos/520/400', whatsapp: 'Ol\u00e1! Tenho interesse nos Materiais de Estudo.', items: ['Guias para grupos','Li\u00e7\u00f5es','Mapas b\u00edblicos','Discipulado','Plano de leitura'] },
-      { icon: 'fa-church', title: 'Palestras', desc: 'Palestras e semin\u00e1rios ao vivo.', image: 'https://picsum.photos/seed/kerigma-palestras/520/400', whatsapp: 'Ol\u00e1! Tenho interesse nas Palestras.', items: ['Semin\u00e1rios','Palestras fam\u00edlia','Congressos','Encontros','Workshops'] },
-      { icon: 'fa-child', title: 'Infantil', desc: 'Conte\u00fado crist\u00e3o para crian\u00e7as.', image: 'https://picsum.photos/seed/kerigma-kids/520/400', whatsapp: 'Ol\u00e1! Tenho interesse no Infantil.', items: ['Livros infantis','Devocionais','Revistas','Jovens','Atividades'] }
+    let REMOTE_SERVICES = [];
+    let REMOTE_GALLERY = [];
+
+    var SUPABASE_URL = window.SUPABASE_URL || 'https://vkrtogskkhumqphiftcz.supabase.co';
+    var SUPABASE_KEY = window.SUPABASE_KEY || '';
+
+    let REMOTE_SETTINGS = null;
+    let PRODUCTS = [];
+    let REMOTE_REVIEWS = [];
+    let REMOTE_CATEGORIES = [];
+    let ALL_ITEMS = [];
+    let currentCatFilter = null;
+
+    function cleanPhone(p) {
+      return String(p || '').replace(/[^\d]/g, '');
+    }
+
+    function extractWaMsg(a) {
+      try {
+        const u = new URL(a.href);
+        return u.searchParams.get('text') || '';
+      } catch { return ''; }
+    }
+
+    function applySiteSettings(s) {
+      if (!s || typeof s !== 'object') return;
+      if (s.hero_title) document.getElementById('heroTitle').textContent = s.hero_title;
+      if (s.hero_subtitle) document.getElementById('heroSubtitle').textContent = s.hero_subtitle;
+      if (s.cta_title) document.getElementById('ctaTitle').textContent = s.cta_title;
+      if (s.cta_text) document.getElementById('ctaText').textContent = s.cta_text;
+      if (s.address) document.getElementById('footerAddress').innerHTML = '<i class="fas fa-map-marker-alt"></i> ' + escapeHtml(s.address);
+      if (s.whatsapp) {
+        const num = cleanPhone(s.whatsapp);
+        document.querySelectorAll('a[href^="https://wa.me/"]').forEach(a => {
+          if (a.id === 'heroCta' || a.id === 'ctaBtn' || a.id === 'whatsappFab') {
+            const msg = extractWaMsg(a);
+            a.href = 'https://wa.me/' + num + (msg ? '?text=' + msg : '');
+          }
+        });
+      }
+    }
+
+    async function fetchRemoteConfig() {
+      try {
+        const [sRes, gRes, stRes, rRes, cRes] = await Promise.all([
+          fetch(SUPABASE_URL + '/rest/v1/services?select=*&order=sort_order.asc', {
+            headers: { apikey: SUPABASE_KEY, Authorization: 'Bearer ' + SUPABASE_KEY }
+          }),
+          fetch(SUPABASE_URL + '/rest/v1/gallery?order=sort_order.asc', {
+            headers: { apikey: SUPABASE_KEY, Authorization: 'Bearer ' + SUPABASE_KEY }
+          }),
+          fetch(SUPABASE_URL + '/rest/v1/site_settings?select=*&limit=1', {
+            headers: { apikey: SUPABASE_KEY, Authorization: 'Bearer ' + SUPABASE_KEY }
+          }),
+          fetch(SUPABASE_URL + '/rest/v1/reviews?select=*&order=created_at.desc', {
+            headers: { apikey: SUPABASE_KEY, Authorization: 'Bearer ' + SUPABASE_KEY }
+          }),
+          fetch(SUPABASE_URL + '/rest/v1/categories?select=*&order=sort_order.asc', {
+            headers: { apikey: SUPABASE_KEY, Authorization: 'Bearer ' + SUPABASE_KEY }
+          })
+        ]);
+        if (!sRes.ok || !gRes.ok) throw new Error('Supabase fetch failed');
+        const svc = await sRes.json();
+        REMOTE_SERVICES = svc;
+        REMOTE_GALLERY = await gRes.json();
+        if (rRes.ok) { const rr = await rRes.json(); REMOTE_REVIEWS = Array.isArray(rr) ? rr.filter(x => x.approved === true) : []; }
+        if (cRes.ok) { const cc = await cRes.json(); REMOTE_CATEGORIES = Array.isArray(cc) ? cc : []; }
+        if (stRes.ok) {
+          const rows = await stRes.json();
+          REMOTE_SETTINGS = Array.isArray(rows) && rows[0] ? rows[0] : null;
+          applySiteSettings(REMOTE_SETTINGS);
+        }
+      } catch {
+        REMOTE_SERVICES = [];
+        REMOTE_GALLERY = [];
+        REMOTE_REVIEWS = [];
+        REMOTE_CATEGORIES = [];
+        try {
+          const s = JSON.parse(localStorage.getItem('kerigma:service-carousel-items') || '[]');
+          const g = JSON.parse(localStorage.getItem('kerigma:gallery-carousel-items') || '[]');
+          if (Array.isArray(s)) REMOTE_SERVICES = s;
+          if (Array.isArray(g)) REMOTE_GALLERY = g;
+        } catch {}
+      }
+    }
+
+    function escapeHtml(value) {
+      return String(value ?? '').replace(/[&<>"']/g, char => ({
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#39;'
+      })[char]);
+    }
+
+    function safeIcon(icon) {
+      return /^[a-z0-9-]+$/i.test(icon || '') ? icon : 'fa-image';
+    }
+
+    function safeImage(src, fallback) {
+      const value = String(src || '');
+      return /^(https?:\/\/|data:image\/|[\w./-]+$)/i.test(value) ? value : fallback;
+    }
+
+    function shouldReduceMotion() {
+      return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    }
+
+    let services = [
+      { icon: 'fa-book-bible', title: 'Livros Teol\u00f3gicos', desc: 'Livros teol\u00f3gicos para aprofundar seu conhecimento da Palavra.', image: 'https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=720&q=80', whatsapp: 'Ol\u00e1! Tenho interesse nos Livros Teol\u00f3gicos. Poderia me enviar mais informa\u00e7\u00f5es?', items: ['B\u00edblias de estudo','Teologia sistem\u00e1tica','Hist\u00f3ria da Igreja','Hermen\u00eautica b\u00edblica','Aconselhamento pastoral'] },
+      { icon: 'fa-tablet-alt', title: 'E-books', desc: 'E-books pr\u00e1ticos e acess\u00edveis para estudo em qualquer lugar.', image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=720&q=80', whatsapp: 'Ol\u00e1! Tenho interesse nos E-books. Poderia me enviar mais informa\u00e7\u00f5es?', items: ['E-books de teologia','Guias de estudo b\u00edblico','Devocionais','Apostilas de cursos','Lideran\u00e7a crist\u00e3'] },
+      { icon: 'fa-video', title: 'Cursos Online', desc: 'Cursos online com certificado para sua forma\u00e7\u00e3o teol\u00f3gica.', image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=720&q=80', whatsapp: 'Ol\u00e1! Tenho interesse nos Cursos Online. Poderia me enviar mais informa\u00e7\u00f5es?', items: ['Teologia B\u00e1sica','Hermen\u00eautica','Lideran\u00e7a','Hist\u00f3ria da Igreja','Escatologia'] },
+      { icon: 'fa-pen-fancy', title: 'Materiais de Estudo', desc: 'Materiais complementares para grupos de estudo.', image: 'https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=720&q=80', whatsapp: 'Ol\u00e1! Tenho interesse nos Materiais de Estudo.', items: ['Guias para grupos','Li\u00e7\u00f5es','Mapas b\u00edblicos','Discipulado','Plano de leitura'] },
+      { icon: 'fa-church', title: 'Palestras', desc: 'Palestras e semin\u00e1rios ao vivo.', image: 'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=720&q=80', whatsapp: 'Ol\u00e1! Tenho interesse nas Palestras.', items: ['Semin\u00e1rios','Palestras fam\u00edlia','Congressos','Encontros','Workshops'] },
+      { icon: 'fa-child', title: 'Infantil', desc: 'Conte\u00fado crist\u00e3o para crian\u00e7as.', image: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=720&q=80', whatsapp: 'Ol\u00e1! Tenho interesse no Infantil.', items: ['Livros infantis','Devocionais','Revistas','Jovens','Atividades'] }
     ];
 
-    const N = services.length;
-    const SPREAD = 240;
-    const Z_DEPTH = 320;
+    let N = services.length;
     const SCALE_MIN = 0.6;
     const OPACITY_MIN = 0.3;
+    const reduceMotion = shouldReduceMotion();
 
     let active = 0;
     let isAnimating = false;
     let autoTimer = null;
-    let touchData = null;
 
     const $ = s => document.querySelector(s);
     const carousel = $('#carousel3d');
@@ -405,22 +1087,30 @@
         const el = document.createElement('div');
         el.className = 'card3d' + (i === 0 ? ' active' : '');
         el.dataset.index = i;
-        el.innerHTML = '<img class="thumb" src="' + d.image + '" alt="' + d.title + '" loading="lazy">' +
+        const title = escapeHtml(d.title);
+        const desc = escapeHtml(d.desc);
+        const image = safeImage(d.image, 'hero_logo.jpeg');
+        const icon = safeIcon(d.icon);
+        el.innerHTML = '<img class="thumb" src="' + image + '" alt="' + title + '" width="520" height="400" loading="lazy" decoding="async">' +
           '<div class="card-body">' +
-            '<div class="card-title"><i class="fas ' + d.icon + '"></i>' + d.title + '</div>' +
-            '<div class="card-desc">' + d.desc + '</div>' +
-            '<ul class="card-items">' + d.items.map(it => '<li>' + it + '</li>').join('') + '</ul>' +
-            '<a class="card-cta" href="https://wa.me/5561981897079?text=' + encodeURIComponent(d.whatsapp) + '" target="_blank">' +
+            '<div class="card-title"><i class="fas ' + icon + '"></i>' + title + '</div>' +
+            '<div class="card-desc">' + desc + '</div>' +
+            '<ul class="card-items">' + d.items.slice(0, 3).map(it => '<li>' + escapeHtml(it) + '</li>').join('') + '</ul>' +
+            '<a class="card-cta" href="https://wa.me/5561981897079?text=' + encodeURIComponent(d.whatsapp) + '" target="_blank" rel="noopener noreferrer">' +
               '<i class="fab fa-whatsapp"></i> Saiba mais</a>' +
           '</div>';
         el.addEventListener('click', (e) => {
           if (e.target.closest('.card-cta')) return;
           select(i);
+          openProductDetail(i);
         });
         carousel.appendChild(el);
 
-        const dot = document.createElement('span');
+        const dot = document.createElement('button');
+        dot.type = 'button';
         dot.className = 'dot' + (i === 0 ? ' active' : '');
+        dot.setAttribute('aria-label', 'Ver ' + d.title);
+        dot.setAttribute('aria-pressed', i === 0 ? 'true' : 'false');
         dot.addEventListener('click', () => select(i));
         dotsEl.appendChild(dot);
       }
@@ -434,13 +1124,15 @@
     }
 
     function positionAll(animate) {
+      const spread = window.innerWidth <= 640 ? 170 : window.innerWidth <= 900 ? 200 : 240;
+      const zDepth = window.innerWidth <= 640 ? 220 : window.innerWidth <= 900 ? 260 : 320;
       for (let i = 0; i < N; i++) {
         const el = carousel.children[i];
         const offset = circularDist(i, active);
         const absOff = Math.abs(offset);
         const maxOff = N / 2;
-        const x = offset * SPREAD;
-        const z = absOff * Z_DEPTH;
+        const x = offset * spread;
+        const z = absOff * zDepth;
         const t = Math.min(1, absOff / maxOff);
         const scale = 1 - (1 - SCALE_MIN) * t;
         const opacity = 1 - (1 - OPACITY_MIN) * t;
@@ -448,9 +1140,8 @@
         const zIndex = 100 - absOff;
 
         const transform = 'translateX(' + x + 'px) translateZ(-' + z + 'px) rotateY(' + rotateY + 'deg) scale(' + scale + ')';
-        const props = { zIndex: zIndex, opacity: opacity };
 
-        if (animate) {
+        if (animate && !reduceMotion && window.gsap) {
           gsap.to(el, { transform: transform, opacity: opacity, zIndex: zIndex, duration: 0.7, ease: 'power3.out' });
         } else {
           el.style.transform = transform;
@@ -472,25 +1163,32 @@
     function updateUI(animate) {
       const cards = carousel.querySelectorAll('.card3d');
       cards.forEach((el, i) => el.classList.toggle('active', i === active));
-      dotsEl.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === active));
+      dotsEl.querySelectorAll('.dot').forEach((d, i) => {
+        d.classList.toggle('active', i === active);
+        d.setAttribute('aria-pressed', i === active ? 'true' : 'false');
+      });
       positionAll(animate);
     }
 
     function next() { select((active + 1) % N); }
     function prev() { select((active + N - 1) % N); }
 
-    function startAuto() { autoTimer = setInterval(next, 4500); }
+    function startAuto() {
+      if (reduceMotion) return;
+      autoTimer = setInterval(next, 4500);
+    }
     function stopAuto() { if (autoTimer) { clearInterval(autoTimer); autoTimer = null; } }
     function resetAuto() { stopAuto(); startAuto(); }
 
     function initTouch() {
       const wrap = $('#carouselWrap');
-      let sx, sy, lastX;
+      let sx, sy, lastX, dragging = false;
       wrap.addEventListener('touchstart', e => {
         if (isAnimating) return;
         sx = e.touches[0].clientX;
         sy = e.touches[0].clientY;
         lastX = sx;
+        dragging = false;
         stopAuto();
       }, { passive: true });
       wrap.addEventListener('touchmove', e => {
@@ -499,18 +1197,183 @@
         const dx = t.clientX - sx;
         const dy = t.clientY - sy;
         if (Math.abs(dy) > Math.abs(dx) * 1.3 && Math.abs(dy) > 10) { sx = null; return; }
+        if (Math.abs(dx) > 6) dragging = true;
         lastX = t.clientX;
+        const drag = Math.max(-140, Math.min(140, lastX - sx));
+        const card = carousel.children[active];
+        if (card && window.gsap && !reduceMotion) gsap.to(card, { x: drag, duration: 0.08 });
+        else if (card) card.style.translate = drag + 'px';
       }, { passive: true });
       wrap.addEventListener('touchend', () => {
         if (!sx) return;
         const moved = lastX - sx;
+        if (!dragging) { sx = null; resetAuto(); return; }
         sx = null;
-        if (Math.abs(moved) > 50) { if (moved < 0) next(); else prev(); }
+        const card = carousel.children[active];
+        if (card && window.gsap && !reduceMotion) gsap.to(card, { x: 0, duration: 0.25, ease: 'power2.out' });
+        else if (card) card.style.translate = '';
+        if (Math.abs(moved) > 45) { if (moved < 0) next(); else prev(); }
+        else resetAuto();
       }, { passive: true });
     }
 
+    function fmtBRL(v) {
+      const n = Number(v);
+      if (isNaN(n)) return null;
+      return n.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+    }
+    function starGlyph(r) {
+      r = Number(r) || 0;
+      let s = '';
+      for (let i = 1; i <= 5; i++) s += i <= Math.round(r) ? '★' : '☆';
+      return s;
+    }
+    function reviewsFor(productId) {
+      if (!productId) return [];
+      return REMOTE_REVIEWS.filter(r => String(r.product_id) === String(productId));
+    }
+    async function openProductDetail(idx) {
+      const p = PRODUCTS[idx];
+      if (!p) return;
+      $('.pmodal-overlay').dataset.pi = idx;
+      $('#pmImg').src = safeImage(p.image, 'hero_logo.jpeg');
+      $('#pmImg').alt = p.title;
+      $('#pmType').textContent = typeName(p.product_type);
+      $('#pmTitle').textContent = p.title;
+      $('#pmDesc').textContent = p.description || p.desc || '';
+      $('#pmPrice').textContent = fmtBRL(p.price) || '';
+      $('#pmNoPrice').style.display = (p.price == null || p.price === '') ? 'inline-block' : 'none';
+      $('#pmItems').innerHTML = (Array.isArray(p.items) ? p.items.map(it => '<li>' + escapeHtml(it) + '</li>') : []).join('');
+      $('#pmWa').href = 'https://wa.me/' + cleanPhone(p.whatsapp_phone || p.wa_number || '5561981897079') + '?text=' + encodeURIComponent(p.whatsapp || 'Olá! Tenho interesse neste material.');
+      if (p.payment_link) {
+        $('#pmBuy').href = p.payment_link;
+        $('#pmBuy').style.display = 'inline-flex';
+      } else {
+        $('#pmBuy').style.display = 'none';
+      }
+      $('.pmodal-overlay').classList.add('open');
+      document.body.style.overflow = 'hidden';
+      renderProductReviews(p);
+      setupStarInput();
+      resetReviewForm(p);
+
+      if (p.id) {
+        try {
+          fetch(SUPABASE_URL + '/rest/v1/rpc/web_increment_views', {
+            method: 'POST',
+            headers: { apikey: SUPABASE_KEY, Authorization: 'Bearer ' + SUPABASE_KEY, 'Content-Type': 'application/json' },
+            body: JSON.stringify({ p_product_id: p.id })
+          }).catch(() => {});
+        } catch (_) {}
+      }
+    }
+    function typeName(t) {
+      return ({ ebook: 'E-book', curso: 'Curso', video: 'Vídeo', material: 'Material' })[t] || 'Material';
+    }
+    function closeProductModal() {
+      $('.pmodal-overlay').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    function renderProductReviews(p) {
+      const list = reviewsFor(p.id);
+      const avg = list.length ? list.reduce((a, r) => a + (Number(r.rating) || 0), 0) / list.length : 0;
+      $('#pmAvgStars').textContent = starGlyph(avg);
+      $('#pmRevCount').textContent = list.length ? (avg.toFixed(1) + ' · ' + list.length + ' avaliação(ões)') : 'Sem avaliações ainda';
+      const box = $('#pmReviews');
+      if (!list.length) {
+        box.innerHTML = '<div class="pm-review-empty">Seja o primeiro a avaliar este material.</div>';
+        return;
+      }
+      box.innerHTML = list.slice(0, 8).map(r =>
+        '<div class="pm-review"><div class="pm-review-head"><strong>' + escapeHtml(r.customer_name || 'Cliente') + '</strong><span class="pm-stars">' + starGlyph(r.rating) + '</span></div>' +
+        (r.comment ? '<p>' + escapeHtml(r.comment) + '</p>' : '') + '</div>').join('');
+    }
+    function setupStarInput() {
+      const names = ['pmName', 'pmComment'];
+      names.forEach(id => { $('#' + id).value = localStorage.getItem('kerigma:rev:' + id) || ''; });
+      const stars = $('#pmStarInput').querySelectorAll('.star');
+      stars.forEach(st => {
+        st.textContent = '☆';
+        st.classList.remove('on');
+        st.addEventListener('click', () => {
+          const v = Number(st.dataset.v);
+          stars.forEach((s, i) => {
+            s.textContent = i < v ? '★' : '☆';
+            s.classList.toggle('on', i < v);
+          });
+          $('#pmForm').dataset.rating = v;
+        });
+      });
+    }
+    function resetReviewForm(p) {
+      const form = $('#pmForm');
+      const reviewHeader = form.querySelector('h4');
+      const note = form.querySelector('.pm-note');
+      form.dataset.rating = '0';
+      $('#pmStarInput').querySelectorAll('.star').forEach(s => { s.textContent = '☆'; s.classList.remove('on'); });
+      const name = localStorage.getItem('kerigma:rev:pmName');
+      if (name) $('#pmName').value = name;
+      if (!p.id) {
+        form.querySelectorAll('input, select, textarea, button').forEach(el => el.disabled = true);
+        $('#pmStarInput').querySelectorAll('.star').forEach(s => s.style.pointerEvents = 'none');
+        if (reviewHeader) reviewHeader.textContent = 'Avaliações disponíveis apenas para produtos cadastrados.';
+        if (note) note.textContent = 'Este material ainda não está vinculado a um produto.';
+      } else {
+        form.querySelectorAll('input, select, textarea, button').forEach(el => el.disabled = false);
+        $('#pmStarInput').querySelectorAll('.star').forEach(s => s.style.pointerEvents = '');
+        if (reviewHeader) reviewHeader.textContent = 'Avalie este material';
+        if (note) note.textContent = 'Sua avaliação passará por moderação antes de aparecer publicamente.';
+      }
+    }
+    function initProductModal() {
+      $('#pmClose').addEventListener('click', closeProductModal);
+      $('.pmodal-overlay').addEventListener('click', e => { if (e.target && e.target.classList.contains('pmodal-overlay')) closeProductModal(); });
+      document.addEventListener('keydown', e => { if (e.key === 'Escape') closeProductModal(); });
+      $('#pmForm').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const p = PRODUCTS[Number($('#pmodalOverlay').dataset.pi)];
+        const rating = Number($('#pmForm').dataset.rating);
+        const name = $('#pmName').value.trim();
+        if (!p) { return; }
+        if (!rating || rating < 1 || rating > 5) {
+          const t = $('#pmName').closest('.pm-form').querySelector('.form-err') || document.createElement('div');
+          t.className = 'pm-review-empty form-err';
+          t.style.color = '#ffd166';
+          t.style.fontWeight = '700';
+          t.textContent = 'Escolha uma nota de 1 a 5 para enviar.';
+          $('#pmStarInput').after(t);
+          return;
+        }
+        if (!name) { $('#pmName').focus(); return; }
+        localStorage.setItem('kerigma:rev:pmName', name);
+        localStorage.setItem('kerigma:rev:pmComment', $('#pmComment').value);
+        const payload = {
+          product_id: p.id || null,
+          customer_name: name,
+          rating: rating,
+          comment: $('#pmComment').value.trim(),
+          approved: false
+        };
+        try {
+          await fetch(SUPABASE_URL + '/rest/v1/reviews', {
+            method: 'POST',
+            headers: { apikey: SUPABASE_KEY, Authorization: 'Bearer ' + SUPABASE_KEY, 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          });
+          $('#pmName').value = '';
+          $('#pmComment').value = '';
+          resetReviewForm(p);
+          const note = document.createElement('div');
+          note.className = 'pm-review-empty';
+          note.style.color = '#128c7e';
+          note.style.fontWeight = '700';
+          note.textContent = '✓ Avaliação enviada! Ela aparecerá após aprovação.';
+          $('#pmReviews').prepend(note);
+        } catch (_) {}
+      });
+    }
     function init() {
-      build();
+      if (!carousel.children.length) build();
       positionAll(false);
 
       initTouch();
@@ -523,7 +1386,368 @@
       });
       startAuto();
     }
-    document.addEventListener('DOMContentLoaded', init);
+
+    /* ── Stage Carousel (Galeria) ── */
+    let gallery = [
+      { title: 'Culto de Louvor', img: 'https://images.unsplash.com/photo-1490730141103-6cac27aaab94?auto=format&fit=crop&w=900&q=80' },
+      { title: 'Confraternização', img: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=900&q=80' },
+      { title: 'Seminário 2025', img: 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=900&q=80' },
+      { title: 'Batismo', img: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80' },
+      { title: 'Retiro Espiritual', img: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80' },
+      { title: 'Escola Bíblica', img: 'https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=900&q=80' },
+      { title: 'Formatura', img: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=900&q=80' },
+      { title: 'Ação Social', img: 'https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=900&q=80' },
+      { title: 'Palestra', img: 'https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=900&q=80' },
+      { title: 'Encontro de Jovens', img: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=900&q=80' }
+    ];
+
+    let GN = gallery.length;
+    function galConsts() {
+      const w = window.innerWidth;
+      if (w <= 640) return { spread: 150, zDepth: 80, rotation: 10, visible: 2 };
+      if (w <= 900) return { spread: 240, zDepth: 110, rotation: 12, visible: 2 };
+      return { spread: 320, zDepth: 140, rotation: 14, visible: 2 };
+    }
+    let gActive = 0;
+    let gIsAnimating = false;
+    let gAutoTimer = null;
+    const gal = $('#cylinder');
+    const galDots = $('#galDots');
+    const galCounter = $('#galCounter');
+    const lb = $('#lightbox');
+    const lbImg = $('#lbImg');
+    const lbCounter = $('#lbCounter');
+
+    function galCircularDist(i, pivot) {
+      let d = i - pivot;
+      if (d > GN / 2) d -= GN;
+      if (d < -GN / 2) d += GN;
+      return d;
+    }
+
+    function buildGallery() {
+      for (let i = 0; i < GN; i++) {
+        const el = document.createElement('div');
+        el.className = 'photo-card';
+        const title = escapeHtml(gallery[i].title);
+        const image = safeImage(gallery[i].img, 'hero_logo.jpeg');
+        el.dataset.index = i;
+        el.innerHTML = '<img src="' + image + '" alt="' + title + '" width="900" height="600" loading="lazy" decoding="async"><span class="photo-label">' + title + '</span>';
+        el.querySelector('img').addEventListener('load', function() {
+          const ratio = this.naturalWidth / this.naturalHeight;
+          if (ratio < 0.9) el.classList.add('portrait');
+          else if (ratio > 1.5) el.classList.add('landscape');
+        });
+        el.addEventListener('click', (e) => {
+          if (Number(el.dataset.index) === gActive) { openLightbox(gActive); }
+          else { galSelect(Number(el.dataset.index)); }
+        });
+        gal.appendChild(el);
+
+        const dot = document.createElement('button');
+        dot.type = 'button';
+        dot.className = 'dot' + (i === 0 ? ' active' : '');
+        dot.setAttribute('aria-label', 'Ver foto: ' + gallery[i].title);
+        dot.setAttribute('aria-pressed', i === 0 ? 'true' : 'false');
+        dot.addEventListener('click', () => galSelect(i));
+        galDots.appendChild(dot);
+      }
+    }
+
+    function galPosition(animate) {
+      const c = galConsts();
+      for (let i = 0; i < GN; i++) {
+        const el = gal.children[i];
+        const offset = galCircularDist(i, gActive);
+        const absOff = Math.abs(offset);
+
+        if (absOff > c.visible + 0.5) {
+          if (animate) gsap.to(el, { opacity: 0, scale: 0.5, duration: 0.3 });
+          else { el.style.opacity = 0; el.style.transform = 'scale(0.5)'; }
+          el.style.pointerEvents = 'none';
+          el.style.zIndex = 0;
+          continue;
+        }
+
+        const x = offset * c.spread;
+        const z = absOff * c.zDepth;
+        const rotY = offset * c.rotation;
+        let scale, opacity;
+        if (absOff === 0) { scale = 1.12; opacity = 1; }
+        else if (absOff === 1) { scale = 0.78; opacity = 0.65; }
+        else { scale = 0.55; opacity = 0.25; }
+
+        const transform = 'translateX(' + x + 'px) translateZ(-' + z + 'px) rotateY(' + rotY + 'deg) scale(' + scale + ')';
+
+        if (animate) {
+          gsap.to(el, { transform: transform, opacity: opacity, zIndex: 100 - absOff, duration: 0.5, ease: 'power3.out' });
+        } else {
+          el.style.transform = transform;
+          el.style.opacity = opacity;
+          el.style.zIndex = 100 - absOff;
+        }
+        el.style.pointerEvents = 'auto';
+      }
+    }
+
+    function galSelect(i) {
+      if (gIsAnimating || i === gActive) return;
+      gIsAnimating = true;
+      gActive = i;
+      gal.querySelectorAll('.photo-card').forEach((c, j) => c.classList.toggle('active', j === gActive));
+      galDots.querySelectorAll('.dot').forEach((d, j) => {
+        d.classList.toggle('active', j === gActive);
+        d.setAttribute('aria-pressed', j === gActive ? 'true' : 'false');
+      });
+      galCounter.textContent = (gActive + 1) + ' / ' + GN;
+      galPosition(true);
+      gIsAnimating = false;
+      galResetAuto();
+    }
+
+    function galNext() { galSelect((gActive + 1) % GN); }
+    function galPrev() { galSelect((gActive + GN - 1) % GN); }
+
+    function galStartAuto() {
+      if (reduceMotion) return;
+      gAutoTimer = setInterval(galNext, 4000);
+    }
+    function galStopAuto() { if (gAutoTimer) { clearInterval(gAutoTimer); gAutoTimer = null; } }
+    function galResetAuto() { galStopAuto(); galStartAuto(); }
+
+    /* ── Lightbox ── */
+    function openLightbox(index) {
+      if (lb.classList.contains('open')) return;
+      lb.classList.add('open');
+      lbImg.src = gallery[index].img;
+      lbImg.alt = gallery[index].title;
+      lbCounter.textContent = (index + 1) + ' / ' + GN;
+      lb.dataset.index = index;
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lb.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    function lbNavigate(dir) {
+      const cur = Number(lb.dataset.index);
+      const next = (cur + dir + GN) % GN;
+      lb.dataset.index = next;
+      lbImg.src = gallery[next].img;
+      lbImg.alt = gallery[next].title;
+      lbCounter.textContent = (next + 1) + ' / ' + GN;
+    }
+
+    function initGalTouch() {
+      const wrap = $('#cylinderWrap');
+      let sx, sy, lastX, dragging = false;
+      wrap.addEventListener('touchstart', e => {
+        if (gIsAnimating) return;
+        sx = e.touches[0].clientX;
+        sy = e.touches[0].clientY;
+        lastX = sx;
+        dragging = false;
+        galStopAuto();
+      }, { passive: true });
+      wrap.addEventListener('touchmove', e => {
+        if (!sx || gIsAnimating) return;
+        const t = e.touches[0];
+        const dx = t.clientX - sx;
+        const dy = t.clientY - sy;
+        if (Math.abs(dy) > Math.abs(dx) * 1.3 && Math.abs(dy) > 10) { sx = null; return; }
+        if (Math.abs(dx) > 6) dragging = true;
+        lastX = t.clientX;
+        const drag = Math.max(-160, Math.min(160, lastX - sx));
+        const card = gal.querySelector('.photo-card.active');
+        if (card) card.style.translate = drag + 'px';
+      }, { passive: true });
+      wrap.addEventListener('touchend', () => {
+        if (!sx) return;
+        const moved = lastX - sx;
+        const card = gal.querySelector('.photo-card.active');
+        if (card) card.style.translate = '';
+        sx = null;
+        if (!dragging) { galResetAuto(); return; }
+        if (Math.abs(moved) > 45) { if (moved < 0) galNext(); else galPrev(); }
+        else galResetAuto();
+      }, { passive: true });
+    }
+
+    function toDisplayItem(item) {
+      return {
+        id: item.id,
+        icon: safeIcon(item.icon),
+        title: item.title || 'Novo material',
+        desc: item.description || item.desc || 'Material adicionado nas configurações.',
+        image: safeImage(item.image, 'hero_logo.jpeg'),
+        whatsapp: item.whatsapp || 'Olá! Tenho interesse nesse material.',
+        items: item.items || [],
+        price: item.price != null ? item.price : null,
+        payment_link: item.payment_link,
+        product_type: item.product_type,
+        category: item.category,
+        featured: !!item.featured
+      };
+    }
+
+    function catIdToName(id) {
+      if (!id) return null;
+      const c = REMOTE_CATEGORIES.find(x => String(x.id) === String(id));
+      return c ? (c.name || null) : null;
+    }
+
+    function renderCategoryFilter() {
+      const box = $('#catFilter');
+      if (!box) return;
+      box.innerHTML = '';
+      const mk = (label, catId) => {
+        const b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'cat-btn' + (currentCatFilter === catId ? ' active' : '');
+        b.textContent = label;
+        b.setAttribute('role', 'tab');
+        b.setAttribute('aria-selected', b.classList.contains('active') ? 'true' : 'false');
+        b.addEventListener('click', () => applyCategoryFilter(catId));
+        box.appendChild(b);
+      };
+      mk('Todos', null);
+      REMOTE_CATEGORIES.forEach(c => mk(c.name || 'Categoria', c.id));
+      if (!box.children.length) box.style.display = 'none'; else box.style.display = '';
+    }
+
+    function applyCategoryFilter(catId) {
+      currentCatFilter = catId;
+      rebuildCarousel();
+      renderMaterialGrid();
+      renderCategoryFilter();
+      resetAuto();
+    }
+
+    function rebuildCarousel() {
+      const filtered = currentCatFilter
+        ? ALL_ITEMS.filter(it => it.category && String(it.category) === String(currentCatFilter))
+        : ALL_ITEMS.slice();
+
+      PRODUCTS = filtered.slice();
+      services = filtered.map(toDisplayItem);
+      N = services.length;
+      if (N === 0) {
+        stopAuto();
+        carousel.innerHTML = '';
+        dotsEl.innerHTML = '';
+        return;
+      }
+
+      active = 0;
+      stopAuto();
+      carousel.innerHTML = '';
+      dotsEl.innerHTML = '';
+      build();
+      positionAll(false);
+    }
+
+    function renderMaterialGrid() {
+      const grid = $('#matGrid');
+      if (!grid) return;
+      grid.innerHTML = '';
+      PRODUCTS.forEach((p, idx) => {
+        const card = document.createElement('div');
+        card.className = 'mat-card';
+        const price = p.price != null && p.price !== '' ? fmtBRL(p.price) : null;
+        const badge = p.featured ? '<span class="mat-badge feat">Destaque</span>' : '';
+        card.innerHTML =
+          badge +
+          '<img class="mat-thumb" src="' + safeImage(p.image, 'hero_logo.jpeg') + '" alt="' + escapeHtml(p.title) + '" loading="lazy" decoding="async">' +
+          '<div class="mat-body">' +
+            '<span class="mat-type">' + escapeHtml(typeName(p.product_type)) + '</span>' +
+            '<span class="mat-name">' + escapeHtml(p.title) + '</span>' +
+            (p.description ? '<span class="mat-desc">' + escapeHtml(p.description) + '</span>' : '') +
+            '<div class="mat-foot">' +
+              (price ? '<span class="mat-price">' + price + '</span>' : '<span class="mat-price na">Consulte valores</span>') +
+              '<span class="mat-cta-cue"><i class="fas fa-chevron-right"></i></span>' +
+            '</div>' +
+          '</div>';
+        card.setAttribute('role', 'button');
+        card.setAttribute('tabindex', '0');
+        card.addEventListener('click', () => openProductDetail(idx));
+        card.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openProductDetail(idx); } });
+        grid.appendChild(card);
+      });
+    }
+
+    function initBottomNav() {
+      const nav = $('#mBottomNav');
+      if (!nav) return;
+      const targets = { top: 0, materials: '', gallery: '' };
+      const scrollToId = (id, offset) => {
+        const el = id ? document.getElementById(id) : null;
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        else window.scrollTo({ top: offset, behavior: 'smooth' });
+      };
+      nav.querySelectorAll('.mb-item').forEach(btn => {
+        if (!btn.dataset.target) return; // item WhatsApp (link)
+        btn.addEventListener('click', () => {
+          nav.querySelectorAll('.mb-item').forEach(b => b.classList.remove('mb-active'));
+          btn.classList.add('mb-active');
+          if (btn.dataset.target === 'top') scrollToId(null, 0);
+          else if (btn.dataset.target === 'materials') scrollToId('materialsSection');
+          else if (btn.dataset.target === 'gallery') scrollToId('gallerySection');
+          else if (btn.dataset.target === 'bottom') window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+        });
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', async () => {
+      await fetchRemoteConfig();
+      initProductModal();
+
+      const visibleRemote = REMOTE_SERVICES.filter(item => item.available !== false);
+
+      const staticItems = [
+        { icon: 'fa-book-bible', title: 'Livros Teológicos', description: 'Livros teológicos para aprofundar seu conhecimento da Palavra.', image: 'https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=720&q=80', whatsapp: 'Olá! Tenho interesse nos Livros Teológicos. Poderia me enviar mais informações?', items: ['Bíblias de estudo', 'Teologia sistemática', 'História da Igreja', 'Hermenêutica bíblica', 'Aconselhamento pastoral'], product_type: 'material', whatsapp_phone: '5561981897079' },
+        { icon: 'fa-tablet-alt', title: 'E-books', description: 'E-books práticos e acessíveis para estudo em qualquer lugar.', image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=720&q=80', whatsapp: 'Olá! Tenho interesse nos E-books. Poderia me enviar mais informações?', items: ['E-books de teologia', 'Guias de estudo bíblico', 'Devocionais', 'Apostilas de cursos', 'Liderança cristã'], product_type: 'ebook', whatsapp_phone: '5561981897079' },
+        { icon: 'fa-video', title: 'Cursos Online', description: 'Cursos online com certificado para sua formação teológica.', image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=720&q=80', whatsapp: 'Olá! Tenho interesse nos Cursos Online. Poderia me enviar mais informações?', items: ['Teologia Básica', 'Hermenêutica', 'Liderança', 'História da Igreja', 'Escatologia'], product_type: 'curso', whatsapp_phone: '5561981897079' },
+        { icon: 'fa-pen-fancy', title: 'Materiais de Estudo', description: 'Materiais complementares para grupos de estudo.', image: 'https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=720&q=80', whatsapp: 'Olá! Tenho interesse nos Materiais de Estudo.', items: ['Guias para grupos', 'Lições', 'Mapas bíblicos', 'Discipulado', 'Plano de leitura'], product_type: 'material', whatsapp_phone: '5561981897079' },
+        { icon: 'fa-church', title: 'Palestras', description: 'Palestras e seminários ao vivo.', image: 'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=720&q=80', whatsapp: 'Olá! Tenho interesse nas Palestras.', items: ['Seminários', 'Palestras família', 'Congressos', 'Encontros', 'Workshops'], product_type: 'material', whatsapp_phone: '5561981897079' },
+        { icon: 'fa-child', title: 'Infantil', description: 'Conteúdo cristão para crianças.', image: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=720&q=80', whatsapp: 'Olá! Tenho interesse no Infantil.', items: ['Livros infantis', 'Devocionais', 'Revistas', 'Jovens', 'Atividades'], product_type: 'material', whatsapp_phone: '5561981897079' }
+      ];
+
+      ALL_ITEMS = staticItems.map(toDisplayItem).concat(visibleRemote.map(toDisplayItem));
+
+      gallery.push(...REMOTE_GALLERY.map(item => ({
+        title: item.title || 'Nova foto',
+        img: safeImage(item.image, 'hero_logo.jpeg')
+      })));
+      GN = gallery.length;
+
+      renderCategoryFilter();
+      rebuildCarousel();
+      init();
+      renderMaterialGrid();
+      initBottomNav();
+      buildGallery();
+      gal.querySelectorAll('.photo-card')[0].classList.add('active');
+      galCounter.textContent = '1 / ' + GN;
+      galPosition(false);
+      initGalTouch();
+      $('#galNext').addEventListener('click', () => { galStopAuto(); galNext(); });
+      $('#galPrev').addEventListener('click', () => { galStopAuto(); galPrev(); });
+      $('#lbClose').addEventListener('click', closeLightbox);
+      $('#lbPrev').addEventListener('click', () => lbNavigate(-1));
+      $('#lbNext').addEventListener('click', () => lbNavigate(1));
+      lb.addEventListener('click', e => { if (e.target === lb) closeLightbox(); });
+      document.addEventListener('keydown', e => {
+        if (!lb.classList.contains('open')) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowRight') lbNavigate(1);
+        if (e.key === 'ArrowLeft') lbNavigate(-1);
+      });
+      window.addEventListener('resize', () => { galPosition(false); });
+      window.addEventListener('resize', () => { positionAll(false); });
+      galStartAuto();
+    });
   </script>
 </body>
 </html>

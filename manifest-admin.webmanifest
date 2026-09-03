@@ -1,0 +1,25 @@
+{
+  "name": "Kerigma Admin",
+  "short_name": "Kerigma",
+  "description": "Painel administrativo da Escola de Teologia Kerigma.",
+  "start_url": "/configuracoes.html",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#001a47",
+  "theme_color": "#001a47",
+  "icons": [
+    {
+      "src": "/icons/admin-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/admin-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

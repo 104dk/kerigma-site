@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /configuracoes.html
+
+Sitemap: https://escoladeteologiakerigma.vercel.app/sitemap.xml
